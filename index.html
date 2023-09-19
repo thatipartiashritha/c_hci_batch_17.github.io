@@ -1,0 +1,3765 @@
+<!doctype html>
+<head>
+<title>UMS</title>
+</head>
+<style>
+.footer{
+margin-bottom:1px;
+}
+.menus{
+margin-top:1px;
+}
+ul {
+   list-style-type:none;
+   margin:0;
+   padding:0;
+   overflow:hidden;
+   background-color:#333;
+}
+li {
+   float:left;
+}
+li a{
+   display:block;
+   color:white;
+   text-align:center;
+   padding:14px 16px;
+   text-decoration:none;
+}
+
+li.dropdown{
+   display:inline-block;
+}
+.dropdown-content{
+   display:none;
+   position:absolute;
+   background-color:#f9f9f9;
+   min-width:160px;
+   box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index:1;
+}
+.dropdown-content a{
+   color:black;
+   padding:12px 16px;
+   text-decoration:none;
+   display:block;
+   text-align:left;
+}
+.dropdown-content a:hover
+{background-color:red;}  
+.dropdown:hover .dropdown-content{
+   display:block;
+}
+
+li a:hover, .dropdown:hover .dropbtn,{
+background-color:red;
+}
+.dropdown-content-1{
+display:block;
+position:absloute;
+background-color:#f9f9f9;
+top:0;
+left:150px;
+}
+#labels,#inputs{
+font-size:15pt;
+width:250px;
+}
+table{
+margin:50px;
+}
+td, th{
+vertical-align:top;
+padding:15px;
+}
+#btn {
+color: white;
+background-color:blue;
+border-radius: 10px;
+height: 50px;
+width: 250px;
+font-size: 12pt;
+}
+</style>
+<script>
+    // Function to show HTML content for a specific year
+    function showYearContent(year) {
+      // Hide all year content divs
+      var yearDivs = document.querySelectorAll('.year-content');
+      yearDivs.forEach(function(div) {
+        div.style.display = 'none';
+      });
+
+      // Show the selected year's content
+      var selectedYearDiv = document.getElementById(year + '-year');
+      selectedYearDiv.style.display = 'block';
+    }
+  </script>
+<html>
+<body>
+<div class="header">
+<img src="https://sraap.in/student/h1.png" width=100%>
+</div>
+<div class="menus">
+<ul>
+<li><a href="#home">Home</a></li>
+<li class="dropdown">
+<a href="#" class="dropbtn">Academic Details</a>
+<div class="dropdown-content">
+<a href="#">View Academic Regualtions</a>
+<a href="#">View Academic Calender</a>
+<a href="#">View Syllabus</a>
+<a href="#">View Master TT</a>
+<a href="#">List of Holidays|Working Days</a>
+<a href="#">View Circulars</a>
+</div>
+</li>
+<li class="dropdown">
+<a href="#" class="dropbtn">Profile</a>
+<div class="dropdown-content">
+<a href="#">View Profile</a>
+<a href="#">Update Profile</a>
+<a href="#">Upload Aadhar</a>
+<a href="#">Upload Signature</a>
+<a href="#">Exit Survey</a>
+<a href="#">Exit Survey Report</a>
+</div>
+</li>
+<li class="dropdown">
+<a href="#" class="dropbtn">Attendence</a>
+<div class="dropdown-content">
+<a href="#">Day wise Report</a>
+<a href="#">Month wise Report</a>
+<a href="#">Subject wise Report</a>
+</div>
+</li>
+<li class="dropdown">
+<a href="#" class="dropbtn">Internals</a>
+<div class="dropdown-content">
+<a href="#">View Internal Marks(T&P)</a>
+</div>
+</li>
+<li class="dropdown">
+<a href="#" class="dropbtn">Courses Offered</a>
+<div class="dropdown-content">
+<a href="#">CSE</a>
+<a href="#">ECE</a>
+<a href="#">EEE</a>
+</div>
+</li>
+<li><a href="#Mentoring-Remarks">Mentoring Remarks</a></li>
+<li><a href="#Password">Password</a></li>
+<li><a href="#Grievance">Grievance</a></li>
+<li class="dropdown">
+<a href="#" class="dropbtn">Veiw Time Tables</a>
+<div class="dropdown-content">
+<a><span onclick="showYearContent('1st')">1st Year</span></a>
+<a><span onclick="showYearContent('2nd')">2nd Year</span></a>
+<a><span onclick="showYearContent('3rd')">3rd Year</span></a>
+<a><span onclick="showYearContent('4th')">4th Year</span></a>
+</div>
+</li>
+</ul>
+</div>
+<div id="1st-year" class="year-content" style="display: none;">
+    <h3 style="text-align:center;margin:10px;">1st Year CSE Timetables</h3>
+    <p style="text-align:center;">Timetables to be updated</p>
+    <!-- Add your 1st-year timetable content here -->
+  </div>
+  <div id="2nd-year" class="year-content" style="display: none;">
+    <h3 style="text-align:center;margin:10px;">2nd Year CSE Timetable</h3>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Grid</title>
+  <style>
+    /* Your existing styles */
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .grid-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #3498db;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .fullscreen-content {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .code-content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: left;
+      max-width: 80%;
+      overflow: auto;
+      max-height: 80%;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <button class="grid-item" onclick="showCodeContent(1)">2CSE-A</button>
+    <button class="grid-item" onclick="showCodeContent(2)">2CSE-B</button>
+    <button class="grid-item" onclick="showCodeContent(3)">2CSE-C</button>
+<button class="grid-item" onclick="showCodeContent(4)">2CSE-D</button>
+    <button class="grid-item" onclick="showCodeContent(5)">2CSE-E</button>
+    <button class="grid-item" onclick="showCodeContent(6)">2CSE-F</button>
+    <button class="grid-item" onclick="showCodeContent(7)">2CSE-G</button>
+    <button class="grid-item" onclick="showCodeContent(8)">2CSE-H</button>
+    <button class="grid-item" onclick="showCodeContent(9)">2CSE-I</button>
+    <button class="grid-item" onclick="showCodeContent(10)">2CSE-J</button>
+    <button class="grid-item" onclick="showCodeContent(11)">2CSE-K</button>
+    <button class="grid-item" onclick="showCodeContent(12)">2CSE-L</button>
+    <button class="grid-item" onclick="showCodeContent(13)">2CSE-M</button>
+    <button class="grid-item" onclick="showCodeContent(14)">2CSE-N</button>
+    <button class="grid-item" onclick="showCodeContent(15)">2CSE-O</button>
+    <button class="grid-item" onclick="showCodeContent(16)">2CSE-AIML-A</button>
+    <button class="grid-item" onclick="showCodeContent(17)">2CSE-AIML-B</button>
+    <button class="grid-item" onclick="showCodeContent(18)">2CSE-AIML-C</button>
+    <button class="grid-item" onclick="showCodeContent(19)">2CSE-AIML-D</button>
+    <button class="grid-item" onclick="showCodeContent(20)">2CSE-DS&CS</button>
+  </div>
+
+  <div id="fullscreenContent" class="fullscreen-content">
+    <div class="code-content" id="buttonCodeContent">
+      <!-- Content will be dynamically populated here -->
+    </div>
+    <button onclick="hideCodeContent()">Close</button>
+  </div>
+
+  <script>
+    function showCodeContent(buttonNumber) {
+      const buttonContent = getButtonContent(buttonNumber);
+      document.getElementById("buttonCodeContent").innerHTML = buttonContent;
+      document.getElementById("fullscreenContent").style.display = "flex";
+    }
+
+    function getButtonContent(buttonNumber) {
+      // Return your custom code content for each button here
+      switch (buttonNumber) {
+        case 1:
+          return `<!doctype html>
+<html>
+<head>
+<title>2 CSE-A</title>
+<style>
+table {
+width:100%;
+border-collapse:collapse;
+}
+th, td {
+border:1px solid black;
+padding:8px;
+text-align:center;
+}
+th, #day {
+background-color:#f2f2f2;
+color:red;
+}
+#all {
+color:red;
+}
+p {
+font-size:10pt;
+}
+</style>
+</head>
+<body>
+<center><h1>SR University</h1></center>
+<center><h3>School of Computer Science & Artificial Intelligence</h3></center>
+<br><br>
+<div class="time-table">
+<p>SECTION: &nbsp; II B.TECH  CSE  A</p>
+<table>
+<tr>
+<th>Day</th>
+<th>8:30-9:30</th>
+<th>9:30-10:30</th>
+<th>10:30-11:30</th>
+<th>11:30-12:30</th>
+<th>12:30-1:30</th>
+<th>1:30-2:30</th>
+<th>2:30-3:30</th>
+<th>3:30-4:30</th>
+<th>4:30-5:30</th>
+</tr>
+<tr>
+<td id="all">MON</td>
+<td>DMS(1201)</td>
+<td>DS(1201)</td>
+<td>MPCA(1201)</td>
+<td>HCI(1201)</td>
+<td rowspan="5">LUNCH</td>
+<td>P&S(1201)</td>
+<td>HCI(1201)</td>
+<td>&nbsp</td>
+<td>&nbsp</td>
+</tr>
+<tr>
+<td id="day">TUES</td>
+<tD>MPCA(1201)</td>
+<td>DS(1201)</td>
+<td colspan="2">DS LAB(JKC LAB)</td>
+<td>DMS(1201)</td>
+<td>P&S(1201)</td>
+<td>HCI(1201)</td>
+<td>&nbsp</td>
+</tr>
+<tr>
+<td id="all">WED</td>
+<tD>DS(1201)</td>
+<td>P&S(1201)</td>
+<td>DMS(1201)</td>
+<td>&nbsp</td>
+<td colspan="2">OE</td>
+<td colspan="2">NCC</td>
+</tr>
+<tr>
+<td id="day">THU</td>
+<td>EIPR(1207)</td>
+<td>DMS(1201)</td>
+<td>MPCA(1201)</td>
+<td>DS(1201)</td>
+<td colspan="2">DS LAB(JKC LAB)</td>
+<td>DMS(1201)</td>
+<td>&nbsp</td>
+</tr>
+<tr>
+<td id="all">FRI</td>
+<td colspan="2">HCI LAB(DE/IT LAB)</td>
+<td colspan="2">DS LAB(JKC LAB)</td>
+<td colspan="2">P&S LAB(1302)</td>
+<td colspan="2">MPCA LAB(SRIX-II)</td>
+</tr>
+</table>
+<p>CLASS COORDINATOR: M SRINIVAS</p>
+</div>
+<br>
+<div id="faculty-info">
+<table>
+<tr>
+<th></th>
+<th>COURSE NAME</th>
+<th></th>
+<th>FACULTY NAME</th>
+</tr>
+<tr>
+<td></td>
+<td>DISCRETE MATHEMATICAL STRUCTURE</td>
+<td>DMS</td>
+<td>Y NAGENDER</td>
+</tr>
+<tr>
+<td></td>
+<td>PROBABILTY & STATISTICS</td>
+<td>P&S</td>
+<td>DR C BALARAMA KRISHNA</td>
+</tr>
+<tr>
+<td></td>
+<td>PROBABILTY & STATISTICS LAB</td>
+<td>P&S</td>
+<td>DR C BALARAMA KRISHNA</td>
+</tr>
+<tr>
+<td></td>
+<td>DATA STRUCTURES</td>
+<td>DS</td>
+<td>M SRINIVAS</td>
+</tr>
+<tr>
+<td></td>
+<td>DATA STRUCTURES LAB</td>
+<td>DS</td>
+<td>M SRINIVAS</td>
+</tr>
+<tr>
+<td></td>
+<td>MICROPROCESSOR AND COMPUTER ARCHITECTURE</td>
+<td>MPCA</td>
+<td>MD SALLAUDDIN</td>
+</tr>
+<tr>
+<td></td>
+<td>MICROPROCESSOR AND COMPUTER ARCHITECTURE LAB</td>
+<td>MPCA</td>
+<td>MD SALLAUDDIN</td>
+</tr>
+<tr>
+<td></td>
+<td>HUMAN COMPUTER INTERACTION</td>
+<td>HCI</td>
+<td>DR C SHANKAR</td>
+</tr>
+<tr>
+<td></td>
+<td>HUMAN COMPUTER INTERACTION LAB</td>
+<td>HCI</td>
+<td>DR C SHANKAR</td>
+</tr>
+<tr>
+<td></td>
+<td>ETHICS AND INTELLECTUAL PROPERTY RIGHTS</td>
+<td>EIPR</td>
+<td>DR M Sushruth</td>
+</tr>
+</table>
+</div>
+</body>
+</html>`;
+        case 2:
+          return `<!DOCTYPE html>
+<html>
+<head>
+<title>II B.Tech CSE-B</title>
+<style>
+table {
+width:100%;
+border-collapse:collapse;
+}
+th, td {
+border:1px solid black;
+padding:8px;
+text-align:center;
+}
+th, #day {
+background-color:#f2f2f2;
+color:red;
+}
+#all {
+color:red;
+}
+p {
+font-size:10pt;
+}
+</style>
+</head>
+<body>
+<center><h1>SR University</h1></center>
+<center><h3>School of Computer Science & Artificial Intelligence</h3></center>
+<br><br>
+<div class="time-table">
+<p>SECTION: &nbsp; II B.TECH  CSE  B</p>
+<table>
+<tr>
+<th>Day</th>
+<th>8:30-9:30</th>
+<th>9:30-10:30</th>
+<th>10:30-11:30</th>
+<th>11:30-12:30</th>
+<th>12:30-1:30</th>
+<th>1:30-2:30</th>
+<th>2:30-3:30</th>
+<th>3:30-4:30</th>
+<th>4:30-5:30</th>
+</tr>
+<tr>
+<td id="all">MON</td>
+<td colspan="2">HCI LAB (DE/IT LAB)</td>
+<td>DMS (1202)</td>
+<td>HCI(1202)</td>
+<td rowspan="5">LUNCH</td>
+<td>DS (1202)</td>
+<td>DMS (1202) </td>
+<td colspan="2">P&S LAB (1202) </td>
+</tr>
+<tr>
+<td id="day">TUES</td>
+<td>P&S (1202)</td>
+<td></td>
+<td>DS (1202)</td>
+<td>DMS (1202)</td>
+<td>HCI (1202)</td>
+<td>MPCA (1202) </td>
+<td colspan="2">DS LAB (JKC LAB)</td>
+</tr>
+<tr>
+<td id="all">WED</td>
+<td colspan="2">DS LAB (JKC LAB) </td>
+<td>MPCA (1202)</td>
+<td>P&S (1202)</td>
+<td colspan="2">OE()</td>
+<td colspan="2">NCC()</td>
+</tr>
+<tr>
+<td id="day">THU</td>
+<td colspan="2">MPCA LAB (SRIX-II)</td>
+<td colspan="2">DS LAB (JKC LAB) </td>
+<td>HCI (1202)</td>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td id="all">FRI</td>
+<td>DS (1202)</td>
+<td>DMS (1202) </td>
+<td>P&S (1202)</td>
+<td>EIPR (1202)</td>
+<td>MPCA (1202)</td>
+<td>DS (1202)</td>
+<td colspan="2"></td>
+</tr>
+</table>
+</div>
+<p>CLASS COORDINATOR: M SRINIVAS</p>
+</div>
+<br>
+<div id="faculty-info">
+<table>
+<tr>
+<th>COURSE<br>ID</th>
+<th>COURSE NAME</th>
+<th></th>
+<th>FACULTY NAME</th>
+</tr>
+<tr>
+<td></td>
+<td>DISCRETE MATHEMATICAL STRUCTURE</td>
+<td>DMS</td>
+<td>Dr P Chakradhar</td>
+</tr>
+<tr>
+<td></td>
+<td>PROBABILTY & STATISTICS</td>
+<td>P&S</td>
+<td>Dr G RaviKiran</td>
+</tr>
+<tr>
+<td></td>
+<td>PROBABILTY & STATISTICS LAB</td>
+<td>P&S LAB</td>
+<td>Dr G RaviKiran</td>
+</tr>
+<tr>
+<td></td>
+<td>DATA STRUCTURES</td>
+<td>DS</td>
+<td>Dr A Siva Krishna Reddy</td>
+</tr>
+<tr>
+<td></td>
+<td>DATA STRUCTURES LAB</td>
+<td>DS LAB</td>
+<td>Dr A Siva Krishna Reddy</td>
+</tr>
+<tr>
+<td></td>
+<td>MICROPROCESSOR AND COMPUTER ARCHITECTURE</td>
+<td>MPCA</td>
+<td>K Shiva Kumar</td>
+</tr>
+<tr>
+<td></td>
+<td>MICROPROCESSOR AND COMPUTER ARCHITECTURE LAB</td>
+<td>MPCA LAB</td>
+<td>K Shiva Kumar</td>
+</tr>
+<tr>
+<td></td>
+<td>HUMAN COMPUTER INTERACTION</td>
+<td>HCI</td>
+<td>Dr N Venkatesh</td>
+</tr>
+<tr>
+<td></td>
+<td>HUMAN COMPUTER INTERACTION LAB</td>
+<td>HCI</td>
+<td>Dr N Venkatesh</td>
+</tr>
+<tr>
+<td></td>
+<td>ETHICS AND INTELLECTUAL PROPERTY RIGHTS</td>
+<td>EIPR</td>
+<td>Dr M Sushruth</td>
+</tr>
+</table>
+</div>
+</body>
+</html>
+</body>
+</html>`;
+ case 3:
+          return `<!doctype html>
+<html>
+<head>
+<title>II B.Tech CSE-C</title>
+<style>
+table {
+width:100%;
+border-collapse:collapse;
+}
+th, td {
+border:1px solid black;
+padding:8px;
+text-align:center;
+}
+th, #day {
+background-color:#f2f2f2;
+color:red;
+}
+#all {
+color:red;
+}
+p {
+font-size:10pt;
+}
+</style>
+</head>
+<body>
+<center><h2>SR University</h2></center>
+<center><h4>School of Computer Science & Artificial Intelligence</h4></center><br>
+<div class="time-table">
+<p>SECTION: &nbsp;&nbsp;II B.TECH -CSE -C</p>
+<table>
+<tr>
+<th>Day</th>
+<th>8:30-9:30</th>
+<th>9:30-10:30</th>
+<th>10:30-11:30</th>
+<th>11:30-12:30</th>
+<th>12:30-1:30</th>
+<th>1:30-2:30</th>
+<th>2:30-3:30</th>
+<th>3:30-4:30</th>
+<th>4:30-5:30</th>
+</tr>
+<tr>
+<td id="all">MON</td>
+<td>DS (1203)</td>
+<td>DMS (1203)</td>
+<td>P&S(1203)</td>
+<td>&nbsp</td>
+<td>MPCA (1203)</td>
+<td colspan="2">DS LAB (SRIX-II)</td>
+<td>HCI (1203)</td>
+<td>&nbsp</td>
+</tr>
+<tr>
+<td id="day">TUES</td>
+<td colspan="2">HCI LAB (DE/IT LAB)</td>
+<td>DMS (1203)</td>
+<td>MPCA (1203)</td>
+<td rowspan="4">&nbsp</td>
+<td>DS (1203)</td>
+<td>P&S (1203)</td>
+<td colspan="2">DS LAB (SRIX-II)</td>
+</tr>
+<tr>
+<td id="all">WED</td>
+<tD>DS (1203)</td>
+<td colspan="2">P&S LAB (1203)</td>
+<td>DMS (1203)</td>
+<td colspan="2">OE ()</td>
+<td  colspan="2">NCC ()</td>
+</tr>
+<tr>
+<td id="day">THU</td>
+<td colspan="2">MPCA LAB (MC LAB)</td>
+<td colspan="2">DS LAB (SRIX-II)</td>
+<td>DMS (1203)</td>
+<td> HCI (1203)</td>
+<td colspan="2">&nbsp</td>
+</tr>
+<tr>
+<td id="all">FRI</td>
+<td>&nbsp</td>
+<td>P&S (1203)</td>
+<td>&nbsp</td>
+<td>EIPR (SEMINAR HALL)</td>
+<td>MPCA (1203)</td>
+<td> DS (1203)</td>
+<td>HCI (1203)</td>
+<td>&nbsp</td>
+</tr>
+</table>
+<p>CLASS COORDINATOR: Mr K Sudheer Kumar</p>
+</div>
+<br>
+<div id="faculty-info">
+<table>
+<tr>
+<th>COURSE ID</th>
+<th>COURSE NAME</th>
+<th></th>
+<th>FACULTY NAME</th>
+</tr>
+<tr>
+<td></td>
+<td>Discrete Mathematical Structure</td>
+<td>DMS</td>
+<td> Mr K Sudheer Kumar</td>
+</tr>
+<tr>
+<td></td>
+<td>Probability & Statistics</td>
+<td>P&S</td>
+<td>Dr T Kiran Kumar</td>
+</tr>
+<tr>
+<td></td>
+<td>Probability & Statistics Lab</td>
+<td>P&S LAB</td>
+<td>Dr T Kiran Kumar</td>
+</tr>
+<tr>
+<td></td>
+<td>Data Structures</td>
+<td>DS</td>
+<td>P Radhakrishna</td>
+</tr>
+<tr>
+<td></td>
+<td>Data Structures Lab</td>
+<td>DS LAB</td>
+<td>P Radhakrishna</td>
+</tr>
+<tr>
+<td></td>
+<td>Microprocessor and Computer Architecture</td>
+<td>MPCA</td>
+<td> Ch Sandeep</td>
+</tr>
+<tr>
+<td></td>
+<td>Microprocessor and Computer Architecture Lab</td>
+<td>MPCA LAB</td>
+<td> Ch Sandeep</td>
+</tr>
+<tr>
+<td></td>
+<td>Human Computer Interaction</td>
+<td>HCI</td>
+<td> Syed Nawaz Pasha</td>
+</tr>
+<tr>
+<td></td>
+<td>Human Computer Interaction Lab</td>
+<td>HCI LAB</td>
+<td> Syed Nawaz Pasha</td>
+</tr>
+<tr>
+<td></td>
+<td>Ethics and Intellectual Property Rights</td>
+<td>EIPR</td>
+<td>M Sravan</td>
+</tr>
+</table>
+</div>
+</body>
+</html>`;
+ case 4:
+          return `<!doctype html>
+<html>
+<head>
+<title>II B.Tech CSE-D</title>
+<style>
+table {
+width:100%;
+border-collapse:collapse;
+}
+th, td {
+border:1px solid black;
+padding:8px;
+text-align:center;
+}
+th, #day {
+background-color:#f2f2f2;
+color:red;
+}
+#all {
+color:red;
+}
+p {
+font-size:10pt;
+}
+</style>
+</head>
+<body>
+<center><h1>SR University</h1></center>
+<center><h3>School of Computer Science & Artificial Intelligence</h3></center>
+<br><br>
+<div class="time-table">
+<p>SECTION: &nbsp; II B.TECH  CSE  D</p>
+<table>
+<tr>
+<th>Day</th>
+<th>8:30-9:30</th>
+<th>9:30-10:30</th>
+<th>10:30-11:30</th>
+<th>11:30-12:30</th>
+<th>12:30-1:30</th>
+<th>1:30-2:30</th>
+<th>2:30-3:30</th>
+<th>3:30-4:30</th>
+<th>4:30-5:30</th>
+</tr>
+<tr>
+<td id="all">MON</td>
+<td>DMS(1207)</td>
+<td></td>
+<td colspan="2">DS LAB(SRIX-II)</td>
+<td rowspan="5">LUNCH</td>
+<td>DS(1206)</td>
+<td>P&S(1206)</td>
+<td>HCI(1206)</td>
+<td>&nbsp</td>
+</tr>
+<tr>
+<td id="day">TUES</td>
+<td colspan="2">DS LAB(MC LAB)</td>
+<td>P&S(1206)</td> 
+<td>MPCA(1206)</td>
+<td colspan="2">P&S LAB(1210)</td>
+<td colspan="2">MPCA LAB(SRIX-III)</td>
+</tr>
+<tr>
+<td id="all">WED</td>
+<tD>MPCA(1206)</td>
+<td>P&S(1206)</td>
+<td>&nbsp</td>
+<td>DMS(1206)</td>
+<td colspan="2">OE</td>
+<td colspan="2">NCC</td>
+</tr>
+<tr>
+<td id="day">THU</td>
+<td>EIPR(SEMINAR HALL)</td>
+<td>DMS(1206)</td>
+<td>DS(1206)</td>
+<td></td>
+<td colspan="2">DS LAB(SRIX-II)</td>
+<td colspan="2">HCI LAB(SRIX-I)</td>
+</tr>
+<tr>
+<td id="all">FRI</td>
+<td>DS(1206)</td>
+<td>DS(1206)</td>
+<td>DMS(1206)</td>
+<td>HCI(1206)</td>
+<td></td>
+<td>MPCA(1206)</td>
+<td>HCI(1206)</td>
+<td></td>
+</tr>
+</table>
+<p>CLASS COORDINATOR: K SRAVAN</p>
+</div>
+<br>
+<div id="faculty-info">
+<table>
+<tr>
+<th></th>
+<th>COURSE NAME</th>
+<th></th>
+<th>FACULTY NAME</th>
+</tr>
+<tr>
+<td></td>
+<td>DISCRETE MATHEMATICAL STRUCTURE</td>
+<td>DMS</td>
+<td>DR R VIJAYAPRAKASH</td>
+</tr>
+<tr>
+<td></td>
+<td>PROBABILTY & STATISTICS</td>
+<td>P&S</td>
+<td>DR B RAVINDAR</td>
+</tr>
+<tr>
+<td></td>
+<td>PROBABILTY & STATISTICS LAB</td>
+<td>P&S</td>
+<td>DR B RAVINDAR</td>
+</tr>
+<tr>
+<td></td>
+<td>DATA STRUCTURES</td>
+<td>DS</td>
+<td>K SRAVAN</td>
+</tr>
+<tr>
+<td></td>
+<td>DATA STRUCTURES LAB</td>
+<td>DS</td>
+<td>K SRAVAN</td>
+</tr>
+<tr>
+<td></td>
+<td>MICROPROCESSOR AND COMPUTER ARCHITECTURE</td>
+<td>MPCA</td>
+<td>R ASHOK</td>
+</tr>
+<tr>
+<td></td>
+<td>MICROPROCESSOR AND COMPUTER ARCHITECTURE LAB</td>
+<td>MPCA</td>
+<td>R ASHOK</td>
+</tr>
+<tr>
+<td></td>
+<td>HUMAN COMPUTER INTERACTION</td>
+<td>HCI</td>
+<td>DR C SHANKAR</td>
+</tr>
+<tr>
+<td></td>
+<td>HUMAN COMPUTER INTERACTION LAB</td>
+<td>HCI</td>
+<td>DR C SHANKAR</td>
+</tr>
+<tr>
+<td></td>
+<td>ETHICS AND INTELLECTUAL PROPERTY RIGHTS</td>
+<td>EIPR</td>
+<td>M Sravan</td>
+</tr>
+</table>
+</div>
+</body>
+</html>`;
+ case 5:
+          return `<!doctype html>
+<html>
+<head>
+<title>2CSE-E</title>
+<style>
+	table{
+		width:100%;
+		border-collapse:collapse;
+		}
+	th,td{
+		border:1px solid black;
+		padding:8px;
+		text-align:center;
+		}
+	th{	
+		background-color:#f2f2f2;
+		color:red;
+	}
+</style>
+	
+</head>
+<body>
+
+
+<center>
+	<h1>SR UNIVERSITY</h1></center>
+	<center><h3>School of Computer Science & Artificial Intelligence</h3></center>
+<br><br>
+
+<p align="left">SECTION:&nbsp; II B.TECH  CSE E</p>
+	<table align="center">
+		<tr>
+		<th>DAY</th>
+		<th>8:30-9:30</th>
+		<th>9:30-10:30</th>
+		<th>10:30-11:30</th>
+		<th>11:30-12:30</th>
+		<th>12:30-1:30</th>
+		<th>1:30-2:30</th>
+		<th>2:30-3:30</th>
+		<th>3:30-4:30</th>
+		<th>4:30-5:30</th>
+</tr>
+<tr>
+		<th style="background-color:white";>MONDAY</th>
+		<td colspan="2">MPCA LAB(SRIX-III)</td>
+		
+		<td>P&S(1208)</td>
+<td></td>
+		<td rowspan="5">LUNCH</td>
+		
+		<td>DS(1208)</td>
+		<td>DMS(1208)</td>
+		<td colspan="2">P&S LAB(1208)</td>
+		
+</tr>
+		<tr>
+		<th>TUESDAY</th>
+		<td>DS(1208)</td>
+		<td>P&S(1208)</td>
+		<td>HCI(1208)</td>
+		<td>MPCA(1208)</td>
+		<td colspan="2">DS LAB(JKC LAB)</td>
+		<td>EIPR(SEMINAR HALL)</td>
+		<td></td>
+		</tr>
+		<tr>
+		<th style="background-color:white";>WEDNESDAY</th>
+		<td>HCI(1208)</td>
+		<td>MPCA(1208)</td>
+		<td>P&S(1208)</td>
+		<td>DS(1208)</td>
+		
+		<td colspan="2">OE()</td>
+		<td colspan="2">NCC()</td>
+		</tr>
+		<tr>
+		<th>THURSDAY</th>
+		<td colspan="2">DS LAB(JKC LAB)</td>
+		<td>MPCA(1208)</td>
+		<td>HCI()</td>
+		
+		<td>DMS(1208)</td>
+		<td>DS(21208)</td>
+		<td></td>
+		<td></td>
+		</tr>
+		<tr>
+		<th style="background-color:white";>FRIDAY</th>
+		<td colspan="2">HCI LAB(SRIX-II)</td>
+		<td></td>
+		<td>DMS(1208)</td>
+		<td>     </td>
+		
+		<td>DMS(1208)</td>
+		<td>DS LAB(JKC LAB)</td>
+		<td>DS LAB(JKC LAB)</td>
+		</tr>
+		
+	</center>
+	</table>
+<p align="left">CLASS COORDINATOR :DR.K.DEEPA</p>
+<div id="faculty-info">
+<table>
+<tr>
+<th></th>
+<th>COURSE NAME</th>
+<th></th>
+<th>FACULTY NAME</th>
+</tr>
+<tr>
+<td></td>
+<td>DISCRETE MATHEMATICAL STRUCTURE</td>
+<td>DMS</td>
+<td>DR K.DEEPA</td>
+</tr>
+<tr>
+<td></td>
+<td>PROBABILTY & STATISTICS</td>
+<td>P&S</td>
+<td>E.SURESH REDDY</td>
+</tr>
+<tr>
+<td></td>
+<td>PROBABILTY & STATISTICS LAB</td>
+<td>P&S LAB</td>
+<td>E.SURESH REDDY</td>
+</tr>
+<tr>
+<td></td>
+<td>DATA STRUCTURES</td>
+<td>DS</td>
+<td>D.RANJITH</td>
+</tr>
+<tr>
+<td></td>
+<td>DATA STRUCTURES LAB</td>
+<td>DS LAB</td>
+<td>D.RANJITH</td>
+</tr>
+<tr>
+<td></td>
+<td>MICROPROCESSOR AND COMPUTER ARCHITECTURE</td>
+<td>MPCA</td>
+<td>P.ANUSHA</td>
+</tr>
+<tr>
+<td></td>
+<td>MICROPROCESSOR AND COMPUTER ARCHITECTURE LAB</td>
+<td>MPCA LAB</td>
+<td>P.ANUSHA</td>
+</tr>
+<tr>
+<td></td>
+<td>HUMAN COMPUTER INTERACTION</td>
+<td>HCI</td>
+<td>DR N.VENKATESH</td>
+</tr>
+<tr>
+<td></td>
+<td>HUMAN COMPUTER INTERACTION LAB</td>
+<td>HCI LAB</td>
+<td>DR N.VENKATESH</td>
+</tr>
+<tr>
+<td></td>
+<td>ETHICS AND INTELLECTUAL PROPERTY RIGHTS</td>
+<td>EIPR</td>
+<td>M Sravan</td>
+</tr>
+</table>
+</div>
+</body>
+</html>
+</body>
+</html>`;
+ case 6:
+          return `<!doctype html>
+<html>
+<head>
+<title>II B.Tech CSE-F</title>
+<style>
+table {
+width:100%;
+border-collapse:collapse;
+}
+th, td {
+border:1px solid black;
+padding:8px;
+text-align:center;
+}
+th, #day {
+background-color:#f2f2f2;
+color:red;
+}
+#all {
+color:red;
+}
+p {
+font-size:10pt;
+}
+</style>
+</head>
+<body>
+<center><h1>SR University</h1></center>
+<center><h3>School of Computer Science & Artificial Intelligence</h3></center>
+<br><br>
+<div class="time-table">
+<p>SECTION: &nbsp; II B.TECH  CSE  F</p>
+<table>
+<tr>
+<th>Day</th>
+<th>8:30-9:30</th>
+<th>9:30-10:30</th>
+<th>10:30-11:30</th>
+<th>11:30-12:30</th>
+<th>12:30-1:30</th>
+<th>1:30-2:30</th>
+<th>2:30-3:30</th>
+<th>3:30-4:30</th>
+<th>4:30-5:30</th>
+</tr>
+<tr>
+<td id="all">MON</td>
+<td colspan="1">EIPR(SEMINAR HALL)</td>
+<td>HCI(1210)</td>
+<td>DS LAB(SRIX-III) </td>
+<td>DS LAB(SRIX-III) </td>
+<td rowspan="5">LUNCH</td>
+<td>MPCA(1210)</td>
+<td>DMS(1210)</td>
+<td>P&S LAB(1210)</td>
+<td>P&S LAB(1210)</td>
+</tr>
+<tr>
+<td id="day">TUE</td>
+<tD>MPCA LAB(SRIX-III)</td>
+<td>MPCA LAB(SRIX-III)</td>
+<td>P&S(1210)</td>
+<td>HCI(1210)</td>
+<td>DS LAB(SRIX-III)</td>
+<td>&nbsp DS LAB(SRIX-III)</td>
+<td>&nbsp</td>
+<td>&nbsp</td>
+</tr>
+<tr>
+<td id="all">WED</td>
+<tD>DS(1210)</td>
+<td>P&S(1210)</td>
+<td>MPCA(1210)</td>
+<td>&nbsp</td>
+<td>OE()</td>
+<td>OE()</td>
+<td>NCC()</td>
+<td>NCC()</td>
+</tr>
+<tr>
+<td id="day">THU</td>
+<td>HCI LAB(DE/IT LAB)</td>
+<td>HCI LAB(DE/IT LAB)</td>
+<td>&nbsp</td>
+<td>DMS(1210)</td>
+<td>DS(1210)</td>
+<td>DS(1210)</td>
+<td>DMS(1210)</td>
+<td>&nbsp</td>
+</tr>
+<tr>
+<td id="all">FRI</td>
+<td>P&S(1210)</td>
+<td>HCI(1210)</td>
+<td>DS (1210)</td>
+<td>&nbsp</td>
+<td>MPCA (1210)</td>
+<td>DMS(1210)</td>
+<td>DS LAB(SRIX-III)</td>
+<td>DS LAB(SRIX-III)</td>
+</tr>
+</table>
+<p>CLASS COORDINATOR: Dr K RajChandhar</p>
+</div>
+<br>
+<div id="faculty-info">
+<table>
+<tr>
+<th></th>
+<th>COURSE NAME</th>
+<th></th>
+<th>FACULTY NAME</th>
+</tr>
+<tr>
+<td></td>
+<td>DISCRETE MATHEMATICAL STRUCTURE</td>
+<td>DMS</td>
+<td>Dr K Rajchandhar</td>
+</tr>
+<tr>
+<td></td>
+<td>PROBABILTY & STATISTICS</td>
+<td>P&S</td>
+<td>G Nagaraju</td>
+</tr>
+<tr>
+<td></td>
+<td>PROBABILTY & STATISTICS LAB</td>
+<td>P&S</td>
+<td>G Nagaraju</td>
+</tr>
+<tr>
+<td></td>
+<td>DATA STRUCTURES</td>
+<td>DS</td>
+<td>S Jagadish</td>
+</tr>
+<tr>
+<td></td>
+<td>DATA STRUCTURES LAB</td>
+<td>DS</td>
+<td>S Jagadish</td>
+</tr>
+<tr>
+<td></td>
+<td>MICROPROCESSOR AND COMPUTER ARCHITECTURE</td>
+<td>MPCA</td>
+<td>L Gunakar</td>
+</tr>
+<tr>
+<td></td>
+<td>MICROPROCESSOR AND COMPUTER ARCHITECTURE LAB</td>
+<td>MPCA</td>
+<td>L Gunakar</td>
+</tr>
+<tr>
+<td></td>
+<td>HUMAN COMPUTER INTERACTION</td>
+<td>HCI</td>
+<td>Syed Nawaz Pasha</td>
+</tr>
+<tr>
+<td></td>
+<td>HUMAN COMPUTER INTERACTION LAB</td>
+<td>HCI</td>
+<td>Syed Nawaz Pasha</td>
+</tr>
+<tr>
+<td></td>
+<td>ETHICS AND INTELLECTUAL PROPERTY RIGHTS</td>
+<td>EIPR</td>
+<td>M Sravan</td>
+</tr>
+</table>
+</div>
+</body>
+</html>`;
+ case 7:
+          return `<!doctype html>
+    <html>
+        <head>
+            <title>2CSE-G</title>
+        <style>
+            table {
+            width:100%;
+            border-collapse:collapse;
+            }
+            th, td {
+            border:1px solid black;
+            padding:8px;
+            text-align: center;
+            }
+            th, #day {
+            background-color:#f2f2f2;
+            color:red;
+            }
+            #all {
+            color:red;
+            }
+            p {
+            font-size:10pt;
+            }
+        </style>
+        </head>
+    <body>
+        <center><h1>SR University</h1></center>
+        <center><h3>School of Computer Science & Artificial Intelligence</h3></center>
+        
+    <div class="time-table">
+        <p>SECTION : II B.TECH-CSE-G</p>
+        
+        <table>
+            <tr>
+                <th>DAY</th><th>8:30-9:30</th>
+                <th>9:30-10:30</th><th>10:30-11:30</th>
+                <th>11:30-12:30</th><th>12:30-1:30</th>
+                <th>1:30-2:30</th><th>2:30-3:30</th>
+                <th>3:30-4:30</th><th>4:30-5:30</th>
+            </tr>
+            <tr>
+                <th class="a" style="background-color: #f2f2f2;">MON</th>
+                <td>DS (1214)</td>
+                <td>P&S (1214)</td>
+                <td>DS (1214)</td>
+                <td>MPCA (1214)</td>
+                <th rowspan="5">&nbsp;</th>
+                <td colspan="2">LAB(DE/IT LAB)</td>
+                <td>DMS (1312)</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <th class="a">TUE</th>
+                <td colspan="2">DS LAB (JKC LAB)</td>
+                <td>&nbsp;</td>
+                <td>P&S (1307)</td>
+                <td>&nbsp;</td>
+                <td>DMS (1214)</td>
+                <td>MPCA (1214)</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <th class="a" style="background-color: #f2f2f2;">WED</th>
+                <td colspan="2">MPCA LAB (SRIX-II)</td>
+                <td>DMS (1214)</td>
+                <td>DS (1214)</td>
+                <td colspan="2">OE ()</td>
+                <td colspan="2">NCC()</td>
+            </tr>
+            <tr>
+                <th class="a">THU</th>
+                <td>DMS (1214)</td>
+                <td colspan="2">HCI (1214)</td>
+                <td>EIPR (SEMINAR HALL) </td>
+                <td colspan="2">P&S LAB (1214)</td>
+                <td>MPCA (1214)</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <th class="a" style="background-color: #f2f2f2;">FRI</th>
+                <td colspan="2">DS LAB (JKC LAB)</td>
+                <td>P&S (1207)</td>
+                <td>DS (1207)</td>
+                <td colspan="2">HCI LAB (DE/IT LAB)</td>
+                <td>HCI (1214)</td>
+                <td>&nbsp;</td>
+            </tr>
+    </table>
+<p>Class Coordinator: Dr A Rameshbabu</p>
+</div>
+<br><br>
+<div class="course">
+<table>
+    <tr>
+        <td id="all" style="text-align:center; background-color:#f2f2f2;">COURSE ID</td>
+        <td id="all" style="text-align:center; background-color:#f2f2f2;">COURSE NAME</td>
+        <td id="all" style="text-align:center; background-color:#f2f2f2;"></td>
+        <td id="all" style="text-align:center; background-color:#f2f2f2;">FACULTY NAME</td>
+    </tr>
+    <tr>
+        <th></th>
+        <td style="text-align:left;">Discrete Mathematical Structure</td>
+        <td style="text-align:center;">DMS</td>
+        <td style="text-align:center;">Dr A Ramesh Babu</td>
+    </tr>
+    <tr>
+        <th></th>
+        <td style="text-align:left;">Probability & Statistics</td>
+        <td style="text-align:center;">P&S</td>
+        <td style="text-align:center;">Dr G Nagaraju</td>
+    </tr>
+    <tr>
+        <th></th>
+        <td style="text-align:left;">Probability & Statistics Lab</td>
+        <td style="text-align:center;">P&S LAB</td>
+        <td style="text-align:center;">Dr G Nagaraju</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="text-align:left;">Data Structures</td>
+        <td style="text-align:center;">DS</td>
+        <td style="text-align:center;">R Narasimhulu</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="text-align:left;">Data Structures Lab</td>
+        <td style="text-align:center;">DS LAB</td>
+        <td style="text-align:center;">R Narasimhulu</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="text-align:left;">Microprocessor and Computer Architecture</td>
+        <td style="text-align:center;">MPCA</td>
+        <td style="text-align:center;">Md Sallauddin</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="text-align:left;">Microprocessor and Computer Architecture Lab</td>
+        <td style="text-align:center;">MPCA LAB</td>
+        <td style="text-align:center;">Md Sallauddin</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="text-align:left;">Human Computer Interaction</td>
+        <td style="text-align:center;">HCI</td>
+        <td style="text-align:center;">Dr N Venkatesh</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="text-align:left;">Human Computer Interaction Lab</td>
+        <td style="text-align:center;">HCI LAB</td>
+        <td style="text-align:center;">Dr N Venkatesh</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="text-align:left;">Ethics and Intellectual Property Rights</td>
+        <td style="text-align:center;">EIPR</td>
+        <td style="text-align:center;">Dr M Sushruth</td>
+    </tr>
+</table>
+
+</div>
+</body>
+</html>`;
+ case 8:
+          return `<!doctype html>
+<html>
+<head>
+<title>II B.Tech CSE-H</title>
+<style>
+table {
+width:100%;
+border-collapse:collapse;
+}
+th, td {
+border:1px solid black;
+padding:8px;
+text-align:center;
+}
+th, #day {
+background-color:#f2f2f2;
+color:red;
+}
+#all {
+color:red;
+}
+p {
+font-size:10pt;
+}
+</style>
+</head>
+<body>
+<center><h1>SR University</h1></center>
+<center><h3>School of Computer Science & Artificial 
+Intelligence</h3></center>
+<br><br>
+<div class="time-table">
+<p>SECTION: &nbsp; II B.TECH CSE H</p>
+<table>
+<tr>
+<th>Day</th>
+<th>8:30-9:30</th>
+<th>9:30-10:30</th>
+<th>10:30-11:30</th>
+<th>11:30-12:30</th>
+<th>12:30-1:30</th>
+<th>1:30-2:30</th>
+<th>2:30-3:30</th>
+<th>3:30-4:30</th>
+<th>4:30-5:30</th>
+</tr>
+<tr>
+<td id="all">MON</td>
+<td>EIPR (SEMINAR HALL)</td>
+<td> DS (1207)</td>
+<td>MPCA (1207)</td>
+<td> DMS (1207)</td>
+<td></td>
+<td>DS LAB (MC LAB)</td>
+<td> DS LAB (MC LAB)</td>
+<td>&nbsp</td>
+<td>&nbsp</td>
+</tr>
+<tr>
+<td id="day">TUES</td>
+<td>DS (1207)</td>
+<td>MPCA (1207)</td>
+<td >P&S (1207)</td>
+<td>DMS (1207)</td>
+<td></td>
+<td>MPCA LAB (MC LAB</td>
+<td>MPCA LAB (MC LAB)</td>
+<td>HCI (1207)</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td id="all">WED</td>
+<td>HCI (1207)</td>
+<td>DMS (1207)</td>
+<td>DS LAB (MC LAB)</td>
+<td>DS LAB (MC LAB)</td>
+<td></td>
+<td>OE()</td>
+<td>OE()</td>
+<td>NCC()</td>
+<td>NCC()</td>
+</tr>
+<tr>
+<td id="day">THU</td>
+<td>&nbsp</td>
+<td>P&S (1207)</td>
+<td>MPCA(1207)</td>
+<td>&nbsp</td>
+<td></td>
+<td >HCI (1207)</td>
+<td>DS(1207)</td>
+<td>DMS(1207)</td>
+<td>&nbsp</td>
+</tr>
+<tr>
+<td id="all">FRI</td>
+<td>P&S LAB(1207)</td>
+<td>P&S LAB(1207)</td>
+<td>HCI LAB(DE/IT LAB)</td>
+<td>HCI LAB(DE/IT LAB)</td>
+<td></td>
+<td>DS (1207)</td>
+<td>P&S (1207)</td>
+<td> DS LAB (MC LAB)</td>
+<td> DS LAB (MC LAB)</td>
+</tr>
+</table>
+<p>Class Coordinator: Syed Nawaz Pasha
+</p>
+</div>
+<br>
+<div id="faculty-info">
+<table>
+<tr>
+<th input style=width:10px;>COURSE ID</th>
+<th>COURSE NAME</th>
+<th></th>
+<th>FACULTY NAME</th>
+</tr>
+<tr>
+<td></td>
+<td input style=text-align:left;>Discrete Mathematical Structure</td>
+<td>DMS</td>
+<td>Dr R Vijayaprakash
+</td>
+</tr>
+<tr>
+<td></td>
+<td input style=text-align:left;>Probability & Statistics</td>
+<td>P&S</td>
+<td>E Suresh Reddy</td>
+</tr>
+<tr>
+<td></td>
+<td input style=text-align:left;>Probability & Statistics Lab</td>
+<td>P&S</td>
+<td>E Suresh Reddy</td>
+</tr>
+<tr>
+<td></td>
+<td input style=text-align:left;>Data Structures</td>
+<td>DS</td>
+<td> K Deepthi</td>
+</tr>
+<tr>
+<td></td>
+<td input style=text-align:left;>Data Structures Lab</td>
+<td>DS</td>
+<td> K Deepthi</td>
+</tr>
+<tr>
+<td></td>
+<td input style=text-align:left;>Microprocessor and Computer 
+Architecture</td>
+<td>MPCA</td>
+<td> Faiza Iram
+</td>
+</tr>
+<tr>
+<td></td>
+<td input style=text-align:left;>Microprocessor and Computer Architecture 
+Lab</td>
+<td>MPCA</td>
+<td> Faiza Iram
+</td>
+</tr>
+<tr>
+<td></td>
+<td input style=text-align:left;>Human Computer Interaction</td>
+<td>HCI</td>
+<td> Syed Nawaz Pasha</td>
+</tr>
+<tr>
+<td></td>
+<td input style=text-align:left;>Human Computer Interaction Lab</td>
+<td>HCI</td>
+<td> Syed Nawaz Pasha</td>
+</tr>
+<tr>
+<td></td>
+<td input style=text-align:left;>Ethics and Intellectual Property Rights</td>
+<td>EIPR</td>
+<td>Mr D Rameshbabu</td>
+</tr>
+</table>
+</div>
+</body>
+</html>`;
+ case 9:
+          return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>2 CSE-I timetable</title>
+    <style>
+        table{
+            width:100%;
+            border-collapse: collapse;
+        }
+        th,td{
+            border:1px solid black;
+            padding:8px;
+            text-align: center;
+            
+        }
+        th,#day{
+            background-color: #f2f2f2;
+            color:red;
+        }
+        #all{
+            color:red;
+        }
+        p {
+            font-size:10pt;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 align="center"><b>SR UNIVERSITY</b></h1>
+    <h3 align="center"><b>School of Computer Science & Artificial Intelligence</b></h3><br>
+    <br><br>
+   <div class="time-table">
+    <p>SECTION: &nbsp; II B.TECH -CSE- I</p>
+    <table align="center" >
+        <tr>
+            <th>DAY</th>
+            <th>8:30-9:30</th>
+            <th>9:30-10:30</th>
+            <th>10:30-11:30</th>
+            <th>11:30-12:30</th>
+            <th>12:30-1:30</th>
+            <th>1:30-2:30</th>
+            <th>2:30-3:30</th>
+            <th>3:30-4:30</th>
+            <th>4:30-5:30</th>
+        </tr>
+        <tr>
+            <td id="all">MON</td>
+            <td>P&S(1302)</td>
+            <td>HCI(1302)</td>
+            <td colspan="2">MPCA LAB(JKC LAB)</td>
+            <td rowspan="5">LUNCH</td>
+            <td>DMS(1302)</td>
+            <td>MPCA(1302)</td>
+            <td colspan="2">DS LAB(SRIX-I)</td>
+        </tr>
+        <tr>
+            <td id="day">TUES</td>
+            <td colspan="2">DS LAB(SRIX-I)</td>
+            <td>MPCA(1302)</td>
+            <td>DMS(1302)</td>
+            <td>DS(1302)</td>
+            <td>HCI(1302)</td>
+            <td>EIPR(SEMINARHALL)</td>
+            <td>&nbsp</td>
+        </tr>
+        <tr>
+            <td id="all">WED</td>
+            <td>MPCA(1302)</td>
+            <td>HCI(1302)</td>
+            <td colspan="2">DS LAB(JKC LAB)</td>
+            <td colspan="2">OE</td>
+            <td colspan="2">NCC</td>
+        </tr>
+        <tr>
+            <td id="day">THURS</td>
+            <td>DMS(1302)</td>
+            <td>DS(1302)</td>
+            <td colspan="2">P&S LAB(1302)</td>
+            <td>DS(1302)</td>
+            <td>P&S(1302)</td>
+            <td colspan="2"> </td>
+        </tr>
+        <tr>
+            <td id="all">FRI</td>
+            <td>DS(1302)</td>
+            <td>DMS(1302)</td>
+            <td colspan="2">HCI LAB(SRIX-I)</td>
+            <td colspan="2"> </td>
+            <td>P&S(1302)</td>
+            <td>&nbsp</td>
+        </tr>
+    </table>
+    <p>Class Coordinator: Dr J Bhavana</p>
+    </div>
+    <br>
+    <div id="faculty-info">
+    <table>
+       <tr>
+           <th></th>
+           <th>COURSE NAME</th>
+           <th></th>
+           <th>FACULTY NAME</th>
+      </tr>
+       <tr>
+            <td></td>
+            <td>DISCRETE MATHEMATICAL STRUCTURE</td>
+            <td>DMS</td>
+            <td>Y NAGENDER</td>
+      </tr>
+       <tr>
+            <td></td>
+            <td>PROBABILTY & STATISTICS</td>
+            <td>P&S</td>
+            <td>DR B RAVINDER</td>
+     </tr>
+      <tr>
+            <td></td>
+            <td>PROBABILTY & STATISTICS LAB</td>
+            <td>P&S</td>
+            <td>DR B RAVINDER</td>
+     </tr>
+      <tr>
+           <td></td>
+           <td>DATA STRUCTURES</td>
+           <td>DS</td>
+           <td>DR J BHAVANA</td>
+     </tr>
+      <tr>
+           <td></td>
+           <td>DATA STRUCTURES LAB</td>
+            <td>DS</td>
+           <td>DR J BHAVANA</td>
+      </tr>
+      <tr>
+            <td></td>
+            <td>MICROPROCESSOR AND COMPUTER ARCHITECTURE</td>
+            <td>MPCA</td>
+             <td>K SHIVA KUMAR</td>
+      </tr>
+       <tr>
+            <td></td>
+            <td>MICROPROCESSOR AND COMPUTER ARCHITECTURE LAB</td>
+            <td>MPCA</td>
+            <td>K SHIVA KUMAR</td>
+     </tr>
+      <tr>
+            <td></td>
+            <td>HUMAN COMPUTER INTERACTION</td>
+            <td>HCI</td>
+            <td>B CHAITANYA</td>
+      </tr>
+       <tr>
+            <td></td>
+            <td>HUMAN COMPUTER INTERACTION LAB</td>
+            <td>HCI</td>
+            <td>B CHAITANYA</td>
+     </tr>
+      <tr>
+           <td></td>
+           <td>ETHICS AND INTELLECTUAL PROPERTY RIGHTS</td>
+           <td>EIPR</td>
+           <td>Mr D Rameshbabu</td>
+     </tr>
+   </table>
+   </div>
+</body>
+</html>`;
+ case 10:
+         return `<html>
+<head>
+<style>
+table{
+width:100%;
+border-collapse:collapse;
+
+}
+th,td{
+border:1px solid black;
+padding:8px;
+text-align:center;
+}
+th{
+background-color:#f2f2f2;
+}
+</style>
+</head>
+<body>
+<h2><center>SR UNIVERSITY</center></h2>
+<center><h3>School of Computer Science & Artificial Intelligence</h3></center>
+
+<br><br>
+
+<div class="time-table">
+
+<p>SECTION: &nbsp; II B.TECH  CSE  J</p>
+<table>
+<tr>
+<th style="color:red;">DAY</th>
+<th style="color:red;">8.30-9.30</th>
+<th style="color:red;">9.30-10.30</th>
+<th style="color:red;">10.30-11.30</th>
+<th style="color:red;">11.30-12.30</th>
+<th style="color:red;">12.30-1.30</th>
+<th style="color:red;">1.30-2.30</th>
+<th style="color:red;">2.30-3.30</th>
+<th style="color:red;">3.30-4.30</th>
+
+<th style="color:red;">4.30-5.30</th>
+</tr>
+<tr>
+<td style="color:red;">MON</td>
+<td colspan="2">DS LAB(SRIX-I)</td>
+<td>MPCA (1305)</td>
+<td>DS(1305)</td>
+<td rowspan="5">LUNCH</td>
+<td colspan="2">MPCA LAB(JKC LAB)</td>
+<td>DMS (1305)</td>
+<td>HCI (1305)</td>
+</tr>
+<tr>
+<td style="color:red;Background-color:#f2f2f2">TUE</td>
+<td></td>
+<td>DMS (1305)</td>
+<td colspan="2">HCI LAB(DE IT LAB)</td>
+<td>DS (1305)</td>
+<td></td>
+<td colspan="2">P&S LAB (1305)</td>
+</tr>
+<tr>
+<td style="color:red;">WED</td>
+<td>DMS (1305)</td>
+<td>MPCA (1305)</td>
+<td colspan="2">DS LAB(SRIX-I)</td>
+<td  colspan="2">OE</td>
+<td colspan="2">NCC</td></tr>
+<tr>
+<td style="color:red;Background-color:#f2f2f2">THU</td>
+<td>MPCA (1305)</td>
+<td>DS (1305)</td>
+<td>P&S (1305)</td>
+
+<td>EIPR (SEMINAR HALL)</td>
+<td>DMS (1305)</td>
+<td>HCI (1305)</td>
+<td colspan="2">DS LAB(JKC)</td>
+</tr>
+<tr>
+<td style="color:red;">FRI</td>
+<td>P&S (1305)</td>
+<td></td>
+<td>HCI (1305)</td>
+
+<td>DS (1305)</td>
+
+<td>P&S (1305)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<p>CLASS COORDINATOR: R ASHOK</p>
+
+
+<br>
+
+<div id="faculty-info">
+
+<table>
+
+<tr>
+
+<th style ="color:red;">COURSE<br>ID</th>
+
+<th style ="color:red;">COURSE NAME</th>
+
+<th></th>
+
+<th style ="color:red;">FACULTY NAME</th>
+
+</tr>
+<tr>
+<td></td>
+
+<td>DISCRETE MATHEMATICAL STRUCTURE</td>
+
+<td>DMS</td>
+<td>Dr P Chakradhar</td>
+
+</tr>
+
+<tr>
+<td></td>
+<td>PROBABILTY & STATISTICS</td>
+
+<td>P&S</td>
+
+<td>DR T Kiran Kumar</td>
+
+</tr>
+
+<tr>
+
+<td></td>
+
+<td>PROBABILTY & STATISTICS LAB</td>
+
+<td>P&S</td>
+<td>DR T Kiran Kumar</td>
+
+</tr>
+
+<tr>
+
+<td></td>
+
+<td>DATA STRUCTURES</td>
+
+<td>DS</td>
+
+
+<td>Dr A Siva Krishna Reddy</td>
+
+</tr>
+<tr>
+<td></td>
+<td>DATA STRUCTURES LAB</td>
+<td>DS LAB<t/td>
+<td>Dr A Siva Krishna Reddy</td>
+
+</tr>
+
+<tr>
+
+<td></td>
+
+<td>MICROPROCESSOR AND COMPUTER ARCHITECTURE</td>
+
+<td>MPCA</td>
+
+<td>R Ashok</td>
+
+</tr>
+
+<tr>
+
+<td></td>
+
+<td>MICROPROCESSOR AND COMPUTER ARCHITECTURE LAB</td>
+
+<td>MPCA</td>
+<td>R Ashok</td>
+
+</tr>
+
+<tr>
+
+<td></td>
+
+<td>HUMAN COMPUTER INTERACTION</td>
+
+<td>HCI</td>
+
+<td>D VeeraReddy</td>
+
+</tr>
+
+<tr>
+
+<td></td>
+
+<td>HUMAN COMPUTER INTERACTION LAB</td>
+
+<td>HCI</td>
+
+<td>D VeeraReddy</td>
+
+</tr>
+
+<tr>
+
+<td></td>
+
+<td>ETHICS AND INTELLECTUAL PROPERTY RIGHTS</td>
+
+<td>EIPR</td>
+
+<td>Mr D Rameshbabu</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</body>
+</body>
+</html>`;
+ case 11:
+          return `
+<!doctype html>
+<html>
+<head>
+<title>II B.TECH-CSE-K</title>
+<style>
+table {
+width:100%;
+border-collapse:collapse;
+}
+th, td {
+border:1px solid black;
+padding:8px;
+text-align:center;
+}
+th, #day {
+background-color:#f2f2f2;
+color:red;
+}
+#all {
+color:red;
+}
+p {
+font-size:10pt;
+}
+</style>
+</head>
+<body>
+<center><h1>SR University</h1></center>
+<center><h3>School of Computer Science & Artificial Intelligence</h3></center>
+<br><br>
+<div class="time-table">
+<p>SECTION: &nbsp; II B.TECH-CSE-K</p>
+<table>
+<tr>
+<th>Day</th>
+<th>8:30-9:30</th>
+<th>9:30-10:30</th>
+<th>10:30-11:30</th>
+<th>11:30-12:30</th>
+<th>12:30-1:30</th>
+<th>1:30-2:30</th>
+<th>2:30-3:30</th>
+<th>3:30-4:30</th>
+<th>4:30-5:30</th>
+</tr>
+<tr>
+<td id="all">MON</td>
+<td colspan="2">DS LAB(SRIX-II)</td>
+<td>DMS(1306)</td>
+<td>DS(1306)</td>
+<td rowspan="5">LUNCH</td>
+<td>MPCA(1306)</td>
+<td>&nbsp</td>
+<td colspan="2">MPCA LAB(JKC LAB)</td>
+</tr>
+<tr>
+<td id="day">TUE</td>
+<td colspan="2">DS LAB(SRIX-II)</td>
+<td>DMS(1306)</td>
+<td>P&S(1306)</td>
+<td>DS(1306)</td>
+<td>MPCA(1306)</td>
+<td>HCI(1306)</td>
+<td>HCI(1306)</td>
+</tr>
+<tr>
+<td id="all">WED</td>
+<td colspan="2">P&S LAB(1314)</td>
+<td>&nbsp</td>
+<td>DMS(1314)</td>
+<td colspan="2">OE</td>
+<td colspan="2">NCC</td>
+</tr>
+<tr>
+<td id="day">THU</td>
+<td>DMS(1306)</td>
+<td>DS(1306)</td>
+<td>&nbsp</td>
+<td>&nbsp</td>
+<td>&nbsp</td>
+<td>P&S(1306)</td>
+<td colspan="2">HCI LAB(DE/IT LAB)</td>
+</tr>
+<tr>
+<td id="all">FRI</td>
+<td>DS(1306)</td>
+<td>MPCA(1306)</td>
+<td>HCI(1306)</td>
+<td>&nbsp</td>
+<td colspan="2">DS LAB(SRIX-III)</td>
+<td>P&S(1306)</td>
+<td>EIPR(1306)</td>
+</tr>
+</table>
+<p>CLASS COORDINATOR: P ANUSHA</p>
+</div>
+<br>
+<div id="faculty-info">
+<table>
+<tr>
+<th></th>
+<th>COURSE NAME</th>
+<th></th>
+<th>FACULTY NAME</th>
+</tr>
+<tr>
+<td></td>
+<td>DISCRETE MATHEMATICAL STRUCTURE</td>
+<td>DMS</td>
+<td>DR K DEEPA</td>
+</tr>
+<tr>
+<td></td>
+<td>PROBABILTY & STATISTICS</td>
+<td>P&S</td>
+<td>DR G RAVI KIRAN</td>
+</tr>
+<tr>
+<td></td>
+<td>PROBABILTY & STATISTICS LAB</td>
+<td>P&S LAB</td>
+<td>DR G RAVI KIRAN</td>
+</tr>
+<tr>
+<td></td>
+<td>DATA STRUCTURES</td>
+<td>DS</td>
+<td>RIYAZ</td>
+</tr>
+<tr>
+<td></td>
+<td>DATA STRUCTURES LAB</td>
+<td>DS LAB</td>
+<td>RIYAZ</td>
+</tr>
+<tr>
+<td></td>
+<td>MICROPROCESSOR AND COMPUTER ARCHITECTURE</td>
+<td>MPCA</td>
+<td>P ANUSHA</td>
+</tr>
+<tr>
+<td></td>
+<td>MICROPROCESSOR AND COMPUTER ARCHITECTURE LAB</td>
+<td>MPCA LAB</td>
+<td>P ANUSHA</td>
+</tr>
+<tr>
+<td></td>
+<td>HUMAN COMPUTER INTERACTION</td>
+<td>HCI</td>
+<td>Mr Sharan</td>
+</tr>
+<tr>
+<td></td>
+<td>HUMAN COMPUTER INTERACTION LAB</td>
+<td>HCI LAB</td>
+<td>Mr Sharan</td>
+</tr>
+<tr>
+<td></td>
+<td>ETHICS AND INTELLECTUAL PROPERTY RIGHTS</td>
+<td>EIPR</td>
+<td>Mr D Rameshbabu</td>
+</tr>
+<td></td>
+</table>
+</div>
+</body>
+</html>`;
+
+ case 12:
+          return `<!DOCTYPE html>
+<html>
+<head>
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+  }
+  .navigation {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .navigation a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 15px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .navigation a:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+</style>
+</head>
+<body>
+  <div class="navigation">
+  </div>
+<h1 style="text-align: center;font-family: Verdana, Geneva, Tahoma, sans-serif;">SR UNIVERSITY</h1>
+<h2 style="text-align: center;font-family: Verdana, Geneva, Tahoma, sans-serif;">School of Computer Science and Artificial Intelligence</h2>
+<div id="timetable">
+    <p>Section:II-B.TECH-(CSE-L)</p>
+  <table>
+    <tr>
+      <th style="-webkit-text-fill-color: red;">Days</th>
+      <th style="-webkit-text-fill-color: red;">8:30 AM - 9:30 AM</th>
+      <th style="-webkit-text-fill-color: red;">9:30 AM - 10:30 AM</th>
+      <th style="-webkit-text-fill-color: red;">10:30 AM - 11:30 AM</th>
+      <th style="-webkit-text-fill-color: red;">11:30 AM - 12:30 PM</th>
+      <th style="-webkit-text-fill-color: red;">12:30 PM - 1:30 PM</th>
+      <th style="-webkit-text-fill-color: red;">1:30 PM - 2:30 PM</th>
+      <th style="-webkit-text-fill-color: red;">2:30 PM - 3:30 PM</th>
+      <th style="-webkit-text-fill-color: red;">3:30 PM - 4:30 PM</th>
+      <th style="-webkit-text-fill-color: red;">4:30 PM - 5:30 PM</th>
+    </tr>
+    <tr>
+      <td style="-webkit-text-fill-color: red;background-color: #f2f2f2;">Mon</td>
+      <td>MPCA(1312)</td>
+      <td>P&S(1312)</td>
+      <td>DS LAB(MCLAB)</td>
+      <td>DS LAB(MCLAB)</td>
+      <td colspan="1"></td>
+      <td>DMS(1214)</td>
+      <td>DS(1214)</td>
+      <td>HCI(1214)</td>
+      <td colspan="1"></td>
+    </tr>
+    <tr>
+      <td style="-webkit-text-fill-color: red;">Tue</td>
+      <td>P&SLAB(1214)</td>
+      <td>P&SLAB(1214)</td>
+      <td>DMS(1214)</td>
+      <td>DS(1214)</td>
+      <td colspan="1"></td>
+      <td>HCI LAB(DE/IT LAB)</td>
+      <td>HCI LAB(DE/IT LAB)</td>
+      <td>MPCA(1312)</td>
+      <td colspan="1"></td>
+    </tr>
+    <tr>
+        <td style="-webkit-text-fill-color: red;background-color: #f2f2f2;">Wed</td>
+      <td>DS(1312)</td>
+      <td>HCI(1312)</td>
+      <td colspan="1"></td>
+      <td>P&S(1305)</td>
+      <td colspan="1"></td>
+      <td>OE()</td>
+      <td>OE()</td>
+      <td>NCC()</td>
+      <td>NCC()</td>
+      </tr>
+      <tr>
+        <td style="-webkit-text-fill-color: red;">Thu</td>
+      <td>HCI(1203)</td>
+      <td colspan="1"></td>
+      <td>DS(1203)</td>
+      <td>P&S(1203)</td>
+      <td colspan="1"></td>
+      <td>MPCA(1315)</td>
+      <td>DMS(1315)</td>
+      <td>DSLAB(MC LAB)</td>
+      <td>DSLAB(MC LAB)</td>
+      </tr>
+      <tr>
+        <td style="-webkit-text-fill-color: red;background-color: #f2f2f2;">Fri</td>
+      <td>MPCA LAB(SRIX-III)</td>
+      <td>MPCA LAB(SRIX-III)</td>
+      <td>DMS(1302)</td>
+      <td>ES(1302)</td>
+      <td colspan="1"></td>
+      <td>DSLAB(MC LAB)</td>
+      <td>DSLAB(MC LAB)</td>
+      <td colspan="1"></td>
+      <td colspan="1"></td>
+      </tr>
+  </table>
+  </div>
+  <p>Class coordinator:L.Gunakar</p>
+  <div id="timetable">
+  <table>
+  <tr style="-webkit-text-fill-color: red;background-color: #f2f2f2;">
+    <th colspan="1">COURSE I'D</th>
+    <th colspan="4">COURSE NAME</th>
+    <th colspan="1"></th>
+    <th colspan="4">FACULTY NAME</th>
+  </tr>
+  <tr>
+    <th colspan="1"></th>
+    <th colspan="4">Discrete Mathematical structures</th>
+    <th colspan="1">DMS</th>
+    <th colspan="4">Dr K Rajchander</th>
+  </tr>
+  <tr>
+    <th colspan="1"></th>
+    <th colspan="4">Probability and statistics</th>
+    <th colspan="1">P&S</th>
+    <th colspan="4">Dr C.Balarama Krishna</th>
+  </tr>
+  <tr>
+    <th colspan="1"></th>
+    <th colspan="4">Probability and statistics lab</th>
+    <th colspan="1">P&S LAB</th>
+    <th colspan="4">Dr C.Balarama Krishna</th>
+  </tr>
+  <tr>
+    <th colspan="1"></th>
+    <th colspan="4">Data Structures</th>
+    <th colspan="1">DS</th>
+    <th colspan="4">Dr J Bhavana</th>
+  </tr>
+  <tr>
+    <th colspan="1"></th>
+    <th colspan="4">Data Structures lab</th>
+    <th colspan="1">DS LAB</th>
+    <th colspan="4">Dr J Bhavana</th>
+  </tr>
+  <tr>
+    <th colspan="1"></th>
+    <th colspan="4">Microprocesssor and computer architecture</th>
+    <th colspan="1">MPCA</th>
+    <th colspan="4">G Gunakar</th>
+  </tr>
+  <tr>
+    <th colspan="1"></th>
+    <th colspan="4">Micro processor and computer architecture lab</th>
+    <th colspan="1">MPCA LAB</th>
+    <th colspan="4">G Gunakar</th>
+  </tr>
+  <tr>
+    <th colspan="1"></th>
+    <th colspan="4">Human computer interaction</th>
+    <th colspan="1">HCI</th>
+    <th colspan="4">D Veerreddy</th>
+  </tr>
+  <tr>
+    <th colspan="1"></th>
+    <th colspan="4">Human computer interaction lab</th>
+    <th colspan="1">HCI LAB</th>
+    <th colspan="4">D Veerreddy</th>
+  </tr>
+  <tr>
+    <th colspan="1"></th>
+    <th colspan="4">Entrepreneurship and startup</th>
+    <th colspan="1">E&S</th>
+    <th colspan="4">Dr N Suman</th>
+  </tr>
+</table>
+</div>
+</body>
+</html>`;
+
+ case 13:
+          return `<!doctype html>
+<html>
+<head>
+<title>II B.Tech CSE-M</title>
+<style>
+table {
+width:100%;
+border-collapse:collapse;
+}
+th, td {
+border:1px solid black;
+padding:8px;
+text-align:center;
+}
+th, #day {
+background-color:#f2f2f2;
+color:red;
+}
+#all {
+color:red;
+}
+p {
+font-size:10pt;
+}
+</style>
+</head>
+<body>
+<center><h1>SR UNIVERSITY</h1></center>
+<center><h3>School of Computer Science & Artificial Intelligence</h3></center>
+<br><br>
+<div class="time-table">
+<p>SECTION: &nbsp; II B.TECH  CSE M</p>
+<table>
+<tr>
+<th>Day</th>
+<th>8:30-9:30</th>
+<th>9:30-10:30</th>
+<th>10:30-11:30</th>
+<th>11:30-12:30</th>
+<th>12:30-1:30</th>
+<th>1:30-2:30</th>
+<th>2:30-3:30</th>
+<th>3:30-4:30</th>
+<th>4:30-5:30</th>
+</tr>
+<tr>
+<td id="all">MON</td>
+<td>ES(1307)</td>
+<td>DS(1307)</td>
+<td>DMS(1307)</td>
+<td>P&S(1307)</td>
+<td rowspan="5">LUNCH</td>
+<td>MPCA(1307)</td>
+<td>HCI(1307)</td>
+<td>&nbsp</td>
+<td>&nbsp</td>
+</tr>
+<tr>
+<td id="day">TUES</td>
+<tD>DMS(1206)</td>
+<td>MPCA(1206)</td>
+<td colspan="2">DS LAB(SRIX-II)</td>
+<td>P&S(1307)</td>
+<td>HCI(1307)</td>
+<td colspan="2">MPCA(MC LAB)</td>
+</tr>
+<tr>
+<td id="all">WED</td>
+<td colspan="2">HCI LAB(DE/IT LAB)</td>
+<td colspan="2">DS(1307)</td>
+<td colspan="2">OE()</td>
+<td colspan="2">NCC</td>
+</tr>
+<tr>
+<td id="day">THU</td>
+<td>&nbsp</td>
+<td>DMS(1307)</td>
+<td colspan="2">P&S LAB(1307)</td>
+<td>HCI(1307)</td>
+<td>MPCA(1307)</td>
+<td colspan="2">DS LAB(SRIX-II)</td>
+</tr>
+<tr>
+<td id="all">FRI</td>
+<td>&nbsp</td>
+<td>&nbsp</td>
+<td colspan="2">DS LAB(SRIX-II)</td>
+<td>P&S(1307)</td>
+<td>DMS(1307)</td>
+<td>DS(1307)</td>
+<td>&nbsp</td>
+</tr>
+</table>
+<p style=color:red;>CLASS COORDINATOR:P RADHAKRISHNA</p>
+</div>
+<br>
+<div id="faculty-info">
+<table>
+<tr>
+<th width="50px">COURSE ID</th>
+<th>COURSE NAME</th>
+<th width="90px"></th>
+<th>FACULTY NAME</th>
+</tr>
+<tr>
+<td></td>
+<td>DISCRETE MATHEMATICAL STRUCTURE</td>
+<td>DMS</td>
+<td>Dr A Ramesh Babu</td>
+</tr>
+<tr>
+<td></td>
+<td>PROBABILTY & STATISTICS</td>
+<td>P&S</td>
+<td>E Suresh Reddy</td>
+</tr>
+<tr>
+<td></td>
+<td>PROBABILTY & STATISTICS LAB</td>
+<td>P&S LAB</td>
+<td>E Suresh Reddy</td>
+</tr>
+<tr>
+<td></td>
+<td>DATA STRUCTURES</td>
+<td>DS</td>
+<td>P Radhakrishna</td>
+</tr>
+<tr>
+<td></td>
+<td>DATA STRUCTURES LAB</td>
+<td>DS LAB</td>
+<td>P Radhakrishna</td>
+</tr>
+<tr>
+<td></td>
+<td>MICROPROCESSOR AND COMPUTER ARCHITECTURE</td>
+<td>MPCA</td>
+<td>K Ravi</td>
+</tr>
+<tr>
+<td></td>
+<td>MICROPROCESSOR AND COMPUTER ARCHITECTURE LAB</td>
+<td>MPCA LAB</td>
+<td>K Ravi</td>
+</tr>
+<tr>
+<td></td>
+<td>HUMAN COMPUTER INTERACTION</td>
+<td>HCI</td>
+<td>M Sowmya</td>
+</tr>
+<tr>
+<td></td>
+<td>HUMAN COMPUTER INTERACTION LAB</td>
+<td>HCI LAB</td>
+<td>M Sowmya</td>
+</tr>
+<tr>
+<td></td>
+<td>ENTERPRENUERSHIP AND STARTUPS</td>
+<td>ES</td>
+<td>Mr Sharan</td>
+</tr>
+<tr>
+<td>&nbsp</td>
+<td>&nbsp</td>
+<td>&nbsp</td>
+<td>&nbsp</td>
+</tr>
+</table>
+</div>
+</body>
+</html>`;
+
+ case 14:
+          return `<!doctype html>
+<html>
+<head>
+<title>II B.Tech CSE-N</title>
+<style>
+table {
+width:100%;
+border-collapse:collapse;
+}
+th, td {
+border:1px solid black;
+padding:8px;
+text-align:center;
+}
+th, #day {
+background-color:#f2f2f2;
+color:red;
+}
+#all {
+color:red;
+}
+p {
+font-size:10pt;
+}
+</style>
+</head>
+<body>
+<center><h1>SR University</h1></center>
+<center><h3>School of Computer Science & Artificial Intelligence</h3></center>
+<br><br>
+<div class="time-table">
+<p>SECTION: &nbsp; II B.TECH  CSE  N</p>
+<table>
+<tr>
+<th>Day</th>
+<th>8:30-9:30</th>
+<th>9:30-10:30</th>
+<th>10:30-11:30</th>
+<th>11:30-12:30</th>
+<th>12:30-1:30</th>
+<th>1:30-2:30</th>
+<th>2:30-3:30</th>
+<th>3:30-4:30</th>
+<th>4:30-5:30</th>
+</tr>
+<tr>
+<td id="all">MON</td>
+<td></td>
+<td>DS(1314)</td>
+<td>P&S(1314)</td>
+<td>HCI(1314)</td>
+<td rowspan="5">LUNCH</td>
+<td>DMS(1312)</t0d>
+<td>MPCA(1312)</td>
+<td colspan="2">DS LAB(SRIX-II)</td>
+</tr>
+<tr>
+<td id="day">TUES</td>
+<tD colspan="2">P&S LAB(1312)</td>
+<td>MPCA(1312)</td>
+<td>DS(1312)</td>
+<td colspan="2">DS LAB(SRIX-II)</td>
+<td>DMS(1202)</td>
+<td></td>
+</tr>
+<tr>
+<td id="all">WED</td>
+<td colspan="2">DS LAB(MC LAB)</td>
+<td>HCI(1312)</td>
+<td>DS(1312)</td>
+<td colspan="2">OE</td>
+<td colspan="2">NCC</td>
+</tr>
+<tr>
+<td id="day">THU</td>
+<td>DS(1312)</td>
+<td>ES(1312)</td>
+<td colspan="2">HCI LAB(DE/IT LAB)</td>
+<td>P&S(1312)</td>
+<td></td>
+<td>DMS(1312)</td>
+<td></td>
+</tr>
+<tr>
+<td id="all">FRI</td>
+<td>MPCA(1312)</td>
+<td>HCI(1312)</td>
+<td>P&S(1312)</td>
+<td>DMS(1312)</td>
+<td colspan="2">MPCA LAB(SRIX-II)</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<p>CLASS COORDINATOR: Md Sallauddin</p>
+</div>
+<br>
+<div id="faculty-info">
+<table>
+<tr>
+<th>COURSE ID</th>
+<th>COURSE NAME</th>
+<th></th>
+<th>FACULTY NAME</th>
+</tr>
+<tr>
+<td></td>
+<td>DISCRETE MATHEMATICAL STRUCTURE</td>
+<td>DMS</td>
+<td>Mr K Sudheer Kumar</td>
+</tr>
+<tr>
+<td></td>
+<td>PROBABILTY & STATISTICS</td>
+<td>P&S</td>
+<td>DR B Ravinder</td>
+</tr>
+<tr>
+<td></td>
+<td>PROBABILTY & STATISTICS LAB</td>
+<td>P&S</td>
+<td>DR B Ravinder</td>
+</tr>
+<tr>
+<td></td>
+<td>DATA STRUCTURES</td>
+<td>DS</td>
+<td> K Sravan</td>
+</tr>
+<tr>
+<td></td>
+<td>DATA STRUCTURES LAB</td>
+<td>DS</td>
+<td>K Sravan</td>
+</tr>
+<tr>
+<td></td>
+<td>MICROPROCESSOR AND COMPUTER ARCHITECTURE</td>
+<td>MPCA</td>
+<td>Md Sallauddin</td>
+</tr>
+<tr>
+<td></td>
+<td>MICROPROCESSOR AND COMPUTER ARCHITECTURE LAB</td>
+<td>MPCA</td>
+<td>Md Sallauddin</td>
+</tr>
+<tr>
+<td></td>
+<td>HUMAN COMPUTER INTERACTION</td>
+<td>HCI</td>
+<td>D VeeraReddy</td>
+</tr>
+<tr>
+<td></td>
+<td>HUMAN COMPUTER INTERACTION LAB</td>
+<td>HCI</td>
+<td>D VeeraReddy</td>
+</tr>
+<tr>
+<td></td>
+<td>ENTERPRENURSHIP AND STARTUP</td>
+<td>ES</td>
+<td>DR N Suman</td>
+</tr>
+</table>
+</div>
+</body>
+</html>`;
+
+ case 15:
+         return `
+<html>
+<title>2-CSE-O</title>
+<head>
+<style>
+
+th{color:red;}
+
+h1{text-align:center;
+}
+h4{text-align:center;
+}
+table{border-collapse:collapse;
+width:100%;}
+td{text-align:center;}
+</style>
+</head>
+
+<body>
+
+<h1>SR UNIVERSITY</h1>
+<h4>School of Computer Science & Artificial Inteligence</h4>
+<P>SECTION:II-B.TECH-CSE-O</P>
+<table border="1">
+
+<tr>
+<th style="background-color:#f2f2f2";>DAY</th>
+
+<th style="background-color:#f2f2f2";>8:30-9:30</th><th style="background-color:#f2f2f2";>9:30-10:30</th><th style="background-color:#f2f2f2";>10:30-11:30</th><th style="background-color:#f2f2f2";>11:30-12:30</th>
+<th style="background-color:#f2f2f2";>12:30-1:30</th><th style="background-color:#f2f2f2";>1:30-2:30</th><th style="background-color:#f2f2f2";>2:30-3:30</th><th style="background-color:#f2f2f2";>3:30-4:30</th><th style="background-color:#f2f2f2";>4:30-5:30</th>
+</tr>
+
+<tr><th>MON</th><td>DMS(1315)</td><td>HCI(1315)</td><td>DS LAB(SRIX-I)</td><td>
+DS LAB(SRIX-I)</td><td></td><td>P&S(1314)</td><td>MPCA(1314)</td><td>P&S LAB(1314)</td><td>P&S LAB(1314)</td></tr>
+
+<tr><th style="background-color:#f2f2f2";>TUE</th>
+<td>HCI(1314)</td><td>DMS(1314)</td><td>DS LAB(SRIX-I)</td><td>
+DS LAB(SRIX-I)</td><td></td><td>DMS(1314)</td><td>ES(1314)</td><td>DS(1314)</td><td></td>
+</tr>
+
+<tr><th>WED</th>
+<td>P&S(1315)</td><td>DS(1315)</td><td>HCI LAB(DE/IT LAB)</td><td>
+HCI LAB(DE/IT LAB)</td><td></td><td>OE()</td><td>OE()</td><td>NCC()</td><td>NCC()</td>
+</tr>
+
+<tr><th style="background-color:#f2f2f2";>THU</th>
+<td>MPCA(1314)</td><td>HCI(1314)</td><td></td><td>
+DS(1314)</td><td></td><td>DMS(1314)</td><td></td><td></td><td></td>
+
+</tr>
+<tr><th>FRI</th>
+<td>MPCA LAB(MC LAB)</td><td>MPCA LAB(MC LAB)</td><td>DS(1314)</td><td>
+MPCA(1314)</td><td></td><td> DS LAB(SRIX-I)</td><td>DS LAB(SRIX-I)</td><td>P&S LAB(1314)</td><td></td></tr>
+</tr>
+
+</table>
+<p>Class Coordinator:D Ranjith</p>
+
+<table border="1">
+<tr><th style="background-color:#f2f2f2";>COURES</th><th style="background-color:#f2f2f2";>COURSE NAME</th><th></th><th style="background-color:#f2f2f2";>FACULTY NAME</th></tr>
+<tr>
+<th></th><td style="text-align:start";>Discrete Mathematical Structure</td><td>DMS</td><td>D A Rameshbabu</td></tr>
+<tr>
+<th></th><td style="text-align:start";>Probability & Statistics</td><td>P&S</td><td>Dr B Ravinder</td></tr>
+<tr>
+<th></th><td style="text-align:start";>Probability & Statistics Lab </td><td>P&S LAB</td><td>Dr B Ravinder</td></tr>
+<tr>
+<th></th><td style="text-align:start";>Data Structures</td><td>DS</td><td>D Ranjith</td></tr>
+<tr>
+<th></th><td style="text-align:start";>Data Structures Lab</td><td>DS LAB</td><td>D Ranjith</td></tr>
+<tr>
+<th></th><td style="text-align:start";>Microprocessor and Computer Architecture </td><td>MPCA</td><td>Faiza Iram</td></tr>
+<tr>
+<th></th><td style="text-align:start";>Microprocessor and Computer Architecture Lab </td><td>MPCA LAB</td><td>Faiza Iram</td></tr>
+<tr>
+<th></th><td style="text-align:start";>Human Computer Interaction</td><td>HCI</td><td> Dr C Shankar</td></tr>
+<tr>
+<th></th><td style="text-align:start";>Human Computer Interaction Lab </td><td>HCI LAB</td><td>Dr C Shankar</td></tr>
+<tr>
+<th></th><td style="text-align:start";>Entrepreneurship and startup</td><td>ES</td><td>DR N Suman</td></tr>
+<tr>
+<th>&nbsp</th><td></td><td></td></tr>
+
+
+</table>
+</body>
+</html>`;
+
+ case 16:
+          return `<!doctype html>
+    <html>
+        <head>
+            <title>2CSE-AIML-A</title>
+        <style>
+            table {
+            width:100%;
+            border-collapse:collapse;
+            }
+            th, td {
+            border:1px solid black;
+            padding:8px;
+            }
+            th, #day {
+            background-color:#f2f2f2;
+            color:red;
+            }
+            #all {
+            color:red;
+            }
+            p {
+            font-size:10pt;
+            }
+        </style>
+        </head>
+    <body>
+        <center><h1>SR University</h1></center>
+        <center><h3>School of Computer Science & Artificial Intelligence</h3></center>
+        
+    <div class="time-table">
+        <p>SECTION: &nbsp; II CSE-AIML-A</p>
+        <table>
+            <tr>
+                <th>Day</th>
+                <th>8:30-9:30</th>
+                <th>9:30-10:30</th>
+                <th>10:30-11:30</th>
+                <th>11:30-12:30</th>
+                <th>12:30-1:30</th>
+                <th>1:30-2:30</th>
+                <th>2:30-3:30</th>
+                <th>3:30-4:30</th>
+                <th>4:30-5:30</th>
+            </tr>
+            <tr>
+                <td id="all" style="text-align:center;">MON</td>
+                <td colspan="2" style="text-align:center;">DS LAB(MC LAB)</td>
+                <td style="text-align:center;">MPCA(1315)</td>
+                <td style="text-align:center;"></td>
+                <td style="text-align:center;">DMS(1315)</td>
+                <td style="text-align:center;">STATML(1315)</td>
+                <td colspan="2" style="text-align:center;">DS(1315)</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td id="day" style="text-align:center;">TUE</td>
+                <td style="text-align:center;">DS(1315)</td>
+                <td style="text-align:center;">MPCA(1315)</td>
+                <td style="text-align:center;">ES(1315)</td>
+                <td></td>
+                <td rowspan="4" style="text-align:center;">LUNCH</td>
+                <td style="text-align:center;">P&S(1315)</td>
+                <td style="text-align:center;">DMS(1315)</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+            <td id="all" style="text-align:center;">WED</td>
+            <td colspan="2" style="text-align:center;">DS LAB(SRIX-I)</td>
+            <td style="text-align:center;">DMS(1315)</td>
+            <td style="text-align:center;">STATML(1315)</td>
+            <td colspan="2" style="text-align:center;">OE ()</td>
+            <td colspan="2" style="text-align:center;">NCC ()</td>
+        </tr>
+        <tr>
+            <td id="day" style="text-align:center;">THU</td>
+            <td colspan="2" style="text-align:center;">STATMIL LAB(SRIX-I)</td>
+            <td style="text-align:center;">DS(1315)</td>
+            <td style="text-align:center;">P&S(1315)</td>
+            
+            <td colspan="2" style="text-align:center;">DS LAB(MC LAB)</td>
+            <td style="text-align:center;">MPCA(1315)</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td id="all" style="text-align:center;">FRI</td>
+            <td style="text-align:center;">DMS(1315)</td>
+            <td style="text-align:center;">P&S(1315)</td>
+            <td colspan="2" style="text-align:center;">MPCA LAB(MC LAB)</td>
+            <td colspan="2" style="text-align:center;">P&S LAB(1315)</td>
+            <td style="text-align:center;">STATML(1315)</td>
+            <td></td>
+        </tr>
+    </table>
+<p>Class Coordinator:D.Rameh</p>
+</div>
+<br><br>
+<div class="course">
+<table>
+    <tr>
+        <td id="all" style="text-align:center; background-color:#f2f2f2;">COURSE ID</td>
+        <td id="all" style="text-align:center; background-color:#f2f2f2;">COURSE NAME</td>
+        <td id="all" style="text-align:center; background-color:#f2f2f2;"></td>
+        <td id="all" style="text-align:center; background-color:#f2f2f2;">FACULTY NAME</td>
+    </tr>
+    <tr>
+        <td>&nbsp</td>
+        <td>Discrete Mathematical Structure</td>
+        <td style="text-align:center;">DMS</td>
+        <td style="text-align:center;">Dr.P.Chakradhar</td>
+    </tr>
+    <tr>
+        <td>&nbsp</td>
+        <td>Probability & Statistics</td>
+        <td style="text-align:center;">P&S</td>
+        <td style="text-align:center;">Dr.G.Ravikiran</td>
+    </tr>
+    <tr>
+        <td>&nbsp</td>
+        <td>Probability & Statistics Lab</td>
+        <td style="text-align:center;">P&S LAB</td>
+        <td style="text-align:center;">Dr.G.Ravikiran</td>
+    </tr>
+    <tr>
+        <td>&nbsp</td>
+        <td>Data Structures</td>
+        <td style="text-align:center;">DS</td>
+        <td style="text-align:center;">Dr.Mohd Ali Shaik</td>
+    </tr>
+    <tr>
+        <td>&nbsp</td>
+        <td>Data Structures Lab</td>
+        <td style="text-align:center;">DS LAB</td>
+        <td style="text-align:center;">Dr.Mohd Ali Shaik</td>
+    </tr>
+    <tr>
+        <td>&nbsp</td>
+        <td>Microprocessor and Computer Architecture</td>
+        <td style="text-align:center;">MPCA</td>
+        <td style="text-align:center;">Ch Sandeep</td>
+    </tr>
+    <tr>
+        <td>&nbsp</td>
+        <td>Microprocessor and Computer Architecture Lab</td>
+        <td style="text-align:center;">MPCA LAB</td>
+        <td style="text-align:center;">Ch Sandeep</td>
+    </tr>
+    <tr>
+        <td>&nbsp</td>
+        <td>Stat ML</td>
+        <td style="text-align:center;">Stat ML</td>
+        <td style="text-align:center;">D Ramesh</td>
+    </tr>
+    <tr>
+        <td>&nbsp</td>
+        <td>Stat ML Lab</td>
+        <td style="text-align:center;">Stat ML LAB</td>
+        <td style="text-align:center;">D Ramesh</td>
+    </tr>
+    <tr>
+        <td>&nbsp</td>
+        <td>Entrepreneurship and startup</td>
+        <td style="text-align:center;">ES</td>
+        <td style="text-align:center;">Dr N Suman</td>
+    </tr>
+    <tr>
+        <td>&nbsp</td>
+        <td>&nbsp</td>
+        <td>&nbsp</td>
+        <td>&nbsp</td>
+    </tr>
+    <tr>
+        <td>&nbsp</td>
+        <td>&nbsp</td>
+        <td>&nbsp</td>
+        <td>&nbsp</td>
+    </tr>
+</table>
+
+</div>
+</body>
+
+</html>`;
+
+ case 17:
+          return `<!doctype html>
+<html>
+<head>
+<title>II B.Tech CSE-A</title>
+<style>
+table {
+width:100%;
+border-collapse:collapse;
+}
+th, td {
+border:1px solid black;
+padding:8px;
+text-align:center;
+}
+th, #day {
+background-color:#f2f2f2;
+color:red;
+}
+#all {
+color:red;
+}
+p {
+font-size:10pt;
+}
+</style>
+</head>
+<body>
+<center><h1>SR University</h1></center>
+<center><h3>School of Computer Science & Artificial Intelligence</h3></center>
+<br><br>
+<div class="time-table">
+<p>SECTION: &nbsp; II B.TECH  CSE AIML-B</p>
+<table>
+<tr>
+<th>Day</th>
+<th>8:30-9:30</th>
+<th>9:30-10:30</th>
+<th>10:30-11:30</th>
+<th>11:30-12:30</th>
+<th>12:30-1:30</th>
+<th>1:30-2:30</th>
+<th>2:30-3:30</th>
+<th>3:30-4:30</th>
+<th>4:30-5:30</th>
+</tr>
+<tr>
+<td id="all">MON</td>
+<td>DS(1202)</td>
+<td>DMS(1202)</td>
+<td colspan="2">STATML LAB(DE/IT LAB)</td>
+<td rowspan="5">LUNCH</td>
+<td COLSPAN="2">DS LAB(SRIX-I)</td>
+<td>ES(1302)</td>
+<td>&nbsp</td>
+</tr>
+<tr>
+<td id="day">TUE</td>
+<tD>MPCA(1302)</td>
+<td>DMS(1302)</td>
+<td>STATML(1201)</td>
+<td>P&S(1201)</td>
+<td colspan="2">&nbsp</td>
+<td colspan="2">DS LAB(SRIX-I)</td>
+
+
+</tr>
+<tr>
+<td id="all">WED</td>
+<td>P&S(1202)</td>
+<td>STATML(1202)</td>
+<td>DS(1207)</td>
+<td>DMS(1207)</td>
+<td colspan="2">OE</td>
+<td colspan="2">NCC</td>
+</tr>
+<tr>
+<td id="day">THU</td>
+<td colspan="2">DS LAB(SRIX-I)</td>
+<td>MPCA(1202)</td>
+<td>STATML(1202)</td>
+<td colspan="2">MPCA LAB(SRIX-I)</td>
+<td colspan="2">P&S LAB(1202)</td>
+
+</tr>
+<tr>
+<td id="all">FRI</td>
+<td>DS(1201)</td>
+<td>MPCA(1201)</td>
+<td>P&S(1201)</td>
+<td>DMS(1201)</td>
+<td>DS(1201)</td>
+<td colspan="3">&nbsp</td>
+</tr>
+</table>
+<p>CLASS COORDINATOR: K SHIVA KUMAR</p>
+</div>
+<br>
+<div id="faculty-info">
+<table>
+<tr>
+<th></th>
+<th>COURSE NAME</th>
+<th></th>
+<th>FACULTY NAME</th>
+</tr>
+<tr>
+<td></td>
+<td>DISCRETE MATHEMATICAL STRUCTURE</td>
+<td>DMS</td>
+<td>Y NAGENDER</td>
+</tr>
+<tr>
+<td></td>
+<td>PROBABILTY & STATISTICS</td>
+<td>P&S</td>
+<td>DR C BALARAMA KRISHNA</td>
+</tr>
+<tr>
+<td></td>
+<td>PROBABILTY & STATISTICS LAB</td>
+<td>P&S</td>
+<td>DR C BALARAMA KRISHNA</td>
+</tr>
+<tr>
+<td></td>
+<td>DATA STRUCTURES</td>
+<td>DS</td>
+<td>M SRINIVAS</td>
+</tr>
+<tr>
+<td></td>
+<td>DATA STRUCTURES LAB</td>
+<td>DS</td>
+<td>M SRINIVAS</td>
+</tr>
+<tr>
+<td></td>
+<td>MICROPROCESSOR AND COMPUTER ARCHITECTURE</td>
+<td>MPCA</td>
+<td>K SHIVA KUMAR</td>
+</tr>
+<tr>
+<td></td>
+<td>MICROPROCESSOR AND COMPUTER ARCHITECTURE LAB</td>
+<td>MPCA</td>
+<td>K SHIVA KUMAR</td>
+</tr>
+<tr>
+<td></td>
+<td>STAT ML</td>
+<td>STAT ML</td>
+<td>DR ELN KIRAN</td>
+</tr>
+<tr>
+<td></td>
+<td>STAT ML LAB</td>
+<td>STAT ML</td>
+<td>DR ELN KIRAN</td>
+</tr>
+<tr>
+<td></td>
+<td>ENTREPRENUERSHIP AND STARTUP</td>
+<td>ES</td>
+<td>DR G SATEESHRAJ</td>
+</tr>
+</table>
+</div>
+</body>
+</html>`;
+
+ case 18:
+          return `<html>
+<head>
+<style>
+table{
+width:100%;
+border-collapse:collapse;
+}
+th,td{
+border:1px solid black;
+padding:8px;
+text-align:center;
+}
+
+th{
+background-color:#f2f2f2;
+color:red;
+}
+</style>
+</head>
+<body><h1 style="text-align:center;">SR UNIVERSITY</h1>
+<h3 style="text-align:center;">School of Computer Science & Artificial Intelligence</h3>
+<br><br>
+<div class="time-table">
+<p>SECTION: &nbsp; II AIML-C</p>
+<table>
+
+<tr>
+<th>DAY</th>
+<th>8:30-9:30</th>
+<th>9:30-10:30</th>
+<th>10:30-11:30</th>
+<th>11:30-12:30</th>
+<th>12:30-1:30</th>
+<th>1:30-2:30</th>
+<th>2:30-3:30</th>
+<th>3:30-4:30</th>
+<th>4:30-5:30</th>
+</tr>
+
+<tr>
+<td style="color:red;">MON</td>
+<td >MPCA (1306)</td>
+<td>DMS(1306)</td>
+<td colspan="2">P&S LAB (1302) </td>
+<td></td>
+<td>DS (1305) </td>
+<td>P&S (1305) </td>
+<td colspan="2">DS LAB (SRIX-III)</td>
+</tr>
+
+
+<tr>
+<td style="color:red;background-color:#f2f2f2;"">TUE</td>
+<td>STATML (1306)</td>
+<td>MPCA (1306) </td>
+<td colspan="2">DS LAB (SRIX-III)</td>
+<td></td>
+<td>DMS (1206)</td>
+<td>P&S (1206)</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td style="color:red;">WED</td>
+<td>ES (1214)</td>
+<td>STATML (1214)</td>
+<td colspan="2">DS LAB (SRIX-III)</td>
+<td></td>
+<td colspan="2">OE ()</td>
+<td colspan="2">NCC()</td>
+</tr>
+
+
+<tr>
+<td style="color:red;background-color:#f2f2f2;">THU</td>
+<td>DS (1307)</td>
+<td>DS (1307)</td>
+<td>DMS (1312)</td>
+<td>STATML (1312) </td>
+<td></td>
+<td colspan="2">STATML LAB (SRIX-III) </td>
+<td>MPCA (1314)</td>
+<td></td>
+</tr>
+
+<tr>
+<td style="color:red;">FRI</td>
+<td>DMS (1314)</td>
+<td>DS (1314)</td>
+<td colspan="2">MPCA LAB (SRIX-III)</td>
+<td></td>
+<td></td>
+<td></td>
+<td>P&S (1305)</td>
+<td></td>
+</tr>
+
+</table>
+<p>Class Coordinator:  S Jagadish</p>
+</div>
+<br>
+<div id="faculty-info">
+<table>
+<tr>
+<th></th>
+<th>COURSE NAME</th>
+<th></th>
+<th>FACULTY NAME</th>
+</tr>
+<tr>
+<td></td>
+<td>Discrete Mathematical StructureE</td>
+<td>DMS</td>
+<td>Dr R Vijayaprakash</td>
+</tr>
+<tr>
+<td></td>
+<td>Probability & Statistics</td>
+<td>P&S</td>
+<td>Dr G Ravi Kiran</td>
+</tr>
+<tr>
+<td></td>
+<td>Probability & Statistics Lab</td>
+<td>P&S</td>
+<td>Dr G Ravi Kiran</td>
+</tr>
+<tr>
+<td></td>
+<td>Data Structures </td>
+<td>DS</td>
+<td>S Jagadish</td>
+</tr>
+<tr>
+<td></td>
+<td>Data Structures Lab</td>
+<td>DS LAB </td>
+<td>S Jagadish</td>
+</tr>
+<tr>
+<td></td>
+<td>Microprocessor and Computer Architecture </td>
+<td>MPCA</td>
+<td>R Ashok</td>
+</tr>
+<tr>
+<td></td>
+<td>Microprocessor and Computer Architecture Lab</td>
+<td>MPCA LAB</td>
+<td>R Ashok</td>
+</tr>
+<tr>
+<td></td>
+<td>Stat ML </td>
+<td>Stat ML</td>
+<td>D Ramesh</td>
+</tr>
+<tr>
+<td></td>
+<td>Stat ML Lab </td>
+<td>Stat ML Lab</td>
+<td>D Ramesh</td>
+</tr>
+<tr>
+<td></td>
+<td>Entrepreneurship and startup</td>
+<td>ES</td>
+<td>Dr N suman</td>
+</tr>
+</table>
+</div>
+</body>
+</html>`;
+
+ case 19:
+       return `<!DOCTYPE html>
+<html>
+    <head>
+        <title>2nd CSE-AIML-D</title>
+    </head>
+    <style>
+        body{
+            margin: 0%;
+        }
+        h2
+        {
+            margin-top: 3%;
+            margin-left: 3%;
+            margin-right: 3%;
+            letter-spacing: 1px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        p1{
+            font-size: 20px;
+            letter-spacing: 1px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        p2
+        {
+            margin-left: 5%;
+        }
+        table{
+            border-collapse: collapse;
+            width: 90%;
+        }
+        td{
+            width: 200px;
+            height: 30px;
+            text-align: center;
+        }
+        th
+        {
+            width: 200px;
+            height: 30px;
+            text-align: center;
+            color: red;
+        }
+        th.a{
+            color: red;
+        }
+    </style>
+    <body>
+        <center><h2>SR UNIVERSITY</h2></center>
+        <center><p1>School of Computer Science & Artificial Intelligence</p1></center>
+        <br><br>
+        <p2>SECTION : II AIML-D</p2>
+        <br>
+        <center>
+            <table border="1">
+                <tr>
+                    <th>DAY</th><th>8:30-9:30</th>
+                    <th>9:30-10:30</th><th>10:30-11:30</th>
+                    <th>11:30-12:30</th><th>12:30-1:30</th>
+                    <th>1:30-2:30</th><th>2:30-3:30</th>
+                    <th>3:30-4:30</th><th>4:30-5:30</th>
+                </tr>
+                <tr>
+                    <th class="a" style="background-color: #f2f2f2;">MON</th>
+                    <td>MPCA (1305)</td>
+                    <td>P&S (1305)</td>
+                    <td>&nbsp;</td>
+                    <td>DS (1210)</td>
+                    <th rowspan="5">&nbsp;</th>
+                    <td>STATML (1203)</td>
+                    <td>DMS (1203)</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <th class="a">TUE</th>
+                    <td>DMS (1203)</td>
+                    <td>P&S (1203)</td>
+                    <td>DS (1305)</td>
+                    <td>MPCA (1305)</td>
+                    <td colspan="2">DS LAB (SRIX-I)</td>
+                    <td>STATML (1307)</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <th class="a" style="background-color: #f2f2f2;">WED</th>
+                    <td>DS (1307)</td>
+                    <td>DMS (1307)</td>
+                    <td colspan="2">MPCA LAB (SRIX-II)</td>
+                    <td colspan="2">OE ()</td>
+                    <td colspan="2">NCC()</td>
+                </tr>
+                <tr>
+                    <th class="a">THU</th>
+                    <td>STATML (1206)</td>
+                    <td>DMS (1206)</td>
+                    <td colspan="2">DS LAB (SRIX-I) </td>
+                    <td>MPCA (1206) </td>
+                    <td>DS (1206)</td>
+                    <td colspan="2">P&S LAB (1206)</td>
+                </tr>
+                <tr>
+                    <th class="a" style="background-color: #f2f2f2;">FRI</th>
+                    <td colspan="2">STATML LAB (SRIX-I)</td>
+                    <td>&nbsp;</td>
+                    <td>P&S (1203)</td>
+                    <td colspan="2">DS LAB (JKC LAB)</td>
+                    <td>ES (1202)</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+        </center>
+        <br>
+        <p2>Class Coordinator: R Narasimbul</p2>
+        <center>
+            <table border="1">
+                <tr>
+                    <td id="all" style="text-align:center; background-color:#f2f2f2; color: red;">COURSE ID</td>
+                    <td id="all" style="text-align:center; background-color:#f2f2f2; color: red;">COURSE NAME</td>
+                    <td id="all" style="text-align:center; background-color:#f2f2f2; color: red;"></td>
+                    <td id="all" style="text-align:center; background-color:#f2f2f2; color: red;">FACULTY NAME</td>
+                </tr>
+                <tr>
+                    <th style="width: 2%;"></th>
+                    <td style="text-align:left;">Discrete Mathematical Structure</td>
+                    <td style="text-align:center;">DMS</td>
+                    <td style="text-align:center;">Mr K Sudheer Kumar</td>
+                </tr>
+                <tr>
+                    <th style="width: 2%;"></th>
+                    <td style="text-align:left;">Probability & Statistics</td>
+                    <td style="text-align:center; width: 10%;">P&S</td>
+                    <td style="text-align:center;">Dr T Kiran Kumar</td>
+                </tr>
+                <tr>
+                    <th style="width: 2%;"></th>
+                    <td style="text-align:left;">Probability & Statistics Lab</td>
+                    <td style="text-align:center; width: 10%;">P&S LAB</td>
+                    <td style="text-align:center;">Dr T Kiran Kumar</td>
+                </tr>
+                <tr>
+                    <th style="width: 2%;"></th>
+                    <td style="text-align:left;">Data Structures</td>
+                    <td style="text-align:center; width: 10%;">DS</td>
+                    <td style="text-align:center;">B Narasimhulu</td>
+                </tr>
+                <tr>
+                    <th style="width: 2%;"></th>
+                    <td style="text-align:left;">Data Structures Lab</td>
+                    <td style="text-align:center; width: 10%;">DS LAB</td>
+                    <td style="text-align:center;">B Narasimhulu</td>
+                </tr>
+                <tr>
+                    <th style="width: 2%;"></th>
+                    <td style="text-align:left;">Microprocessor and Computer Architecture</td>
+                    <td style="text-align:center; width: 10%;">MPCA</td>
+                    <td style="text-align:center;">Paiza Iram</td>
+                </tr>
+                <tr>
+                    <th style="width: 2%;"></th>
+                    <td style="text-align:left;">Microprocessor and Computer Architecture Lab</td>
+                    <td style="text-align:center; width: 10%;">MPCA LAB</td>
+                    <td style="text-align:center;">Paiza Iram</td>
+                </tr>
+                <tr>
+                    <th style="width: 2%;"></th>
+                    <td style="text-align:left;">Stat ML</td>
+                    <td style="text-align:center; width: 10%;">Stat ML</td>
+                    <td style="text-align:center;">Dr ELN Kiran</td>
+                </tr>
+                <tr>
+                    <th style="width: 2%;"></th>
+                    <td style="text-align:left;">Stat ML Lab</td>
+                    <td style="text-align:center; width: 10%;">Stat ML LAB</td>
+                    <td style="text-align:center;">Dr ELN Kiran</td>
+                </tr>
+                <tr>
+                    <th style="width: 2%;"></th>
+                    <td style="text-align:left;">Entrepreneurship and startup</td>
+                    <td style="text-align:center; width: 10%;">ES</td>
+                    <td style="text-align:center;">Dr G Sateeshraj</td>
+                </tr>
+            </table>
+        </center> 
+    </body>
+</html>`;
+
+ case 20:
+         return `<!doctype html>
+<html>
+<head>
+<title>II DS&CS</title>
+<style>
+table {
+width:100%;
+border-collapse:collapse;
+}
+th, td {
+border:1px solid black;
+padding:8px;
+text-align:center;
+}
+th, #day {
+background-color:#f2f2f2;
+color:red;
+}
+#all {
+color:red;
+}
+p {
+font-size:10pt;
+}
+</style>
+</head>
+<body>
+<center><h1>SR University</h1></center>
+<center><h3>School of Computer Science & Artificial Intelligence</h3></center>
+<br><br>
+<div class="time-table">
+<p>SECTION: &nbsp; II DS&CS</p>
+<table>
+<tr>
+<th>Day</th>
+<th>8:30-9:30</th>
+<th>9:30-10:30</th>
+<th>10:30-11:30</th>
+<th>11:30-12:30</th>
+<th>12:30-1:30</th>
+<th>1:30-2:30</th>
+<th>2:30-3:30</th>
+<th>3:30-4:30</th>
+<th>4:30-5:30</th>
+</tr>
+<tr>
+<td id="all">MON</td>
+<td colspan="2">MPCA(JKC LAB)</td>
+<td>DS(1312)</td>
+<td>P&S(1312)</td>
+<td rowspan="5">LUNCH</td>
+<td>DMS(1207)</td>
+<td>P&S(1207)</td>
+<td colspan="2">DS LAB(MC LAB)</td>
+</tr>
+<tr>
+<td id="day">TUE</td>
+<td>MPCA(1210)</td>
+<td>DMS(1210)</td>
+<td colspan="2">DS LAB(MC LAB)</td>
+<td>DS(1302)</td>
+<td>FDS/LP(1302/1312</td>
+<td>P&S(1302)</td>
+<td>&nbsp</td>
+</tr>
+<tr>
+<td id="all">WED</td>
+<td>FDS/LP(1306/1305)</td>
+<td>MPCA(1306)</td>
+<td>DMS(1306)</td>
+<td>&nbsp</td>
+<td colspan="2">OE</td>
+<td colspan="2">NCC</td>
+</tr>
+<tr>
+<td id="day">THU</td>
+<td>MPCA(1201)</td>
+<td>DMS(1201)</td>
+<td colspan="2">DS LAB(MC LAB)</td>
+<td colspan="2">FDS/LP LAB(DE/IT LAB)</td>
+<td>DS(1202</td>
+<td>&nbsp</td>
+</tr>
+<tr>
+<td id="all">FRI</td>
+<td colspan="2">P&S LAB(1307)</td>
+<td>DS(1307)</td>
+<td>FDS/LP(1307/1306)</td>
+<td>ES(1306)</td>
+<td>&nbsp</td>
+<td>&nbsp</td>
+<td>&nbsp</td>
+</tr>
+</table>
+<p>CLASS COORDINATOR: K RAVI</p>
+</div>
+<br>
+<div id="faculty-info">
+<table>
+<tr>
+<th></th>
+<th>COURSE NAME</th>
+<th></th>
+<th>FACULTY NAME</th>
+</tr>
+<tr>
+<td></td>
+<td>DISCRETE MATHEMATICAL STRUCTURE</td>
+<td>DMS</td>
+<td>DR K DEEPA</td>
+</tr>
+<tr>
+<td></td>
+<td>PROBABILTY & STATISTICS</td>
+<td>P&S</td>
+<td>DR C BALARAMA KRISHNA</td>
+</tr>
+<tr>
+<td></td>
+<td>PROBABILTY & STATISTICS LAB</td>
+<td>P&S</td>
+<td>DR C BALARAMA KRISHNA</td>
+</tr>
+<tr>
+<td></td>
+<td>DATA STRUCTURES</td>
+<td>DS</td>
+<td>K DEEPTHI</td>
+</tr>
+<tr>
+<td></td>
+<td>DATA STRUCTURES LAB</td>
+<td>DS</td>
+<td>K DEEPTHI</td>
+</tr>
+<tr>
+<td></td>
+<td>MICROPROCESSOR AND COMPUTER ARCHITECTURE</td>
+<td>MPCA</td>
+<td>K RAVI</td>
+</tr>
+<tr>
+<td></td>
+<td>MICROPROCESSOR AND COMPUTER ARCHITECTURE LAB</td>
+<td>MPCA</td>
+<td>K RAVI</td>
+</tr>
+<tr>
+<td></td>
+<td>FUNDAMENTALS OF DATA SCIENCE(DS)/LINUX PROGRAMMING(CS)</td>
+<td>FDS/LP</td>
+<td>ASIYA/O SRINIVAS</td>
+</tr>
+<tr>
+<td></td>
+<td>ENTREPRENEURSHIP AND STARTUP</td>
+<td>ES</td>
+<td>DR G SATEESH RAJ</td>
+</tr>
+<td></td>
+</table>
+</div>
+</body>
+</html>`;
+
+
+
+        // Add cases for other buttons
+        default:
+          return `<p>No content available.</p>`;
+      }
+    }
+
+    function hideCodeContent() {
+      document.getElementById("fullscreenContent").style.display = "none";
+    }
+  </script>
+</body>
+</html>
+
+    <!-- Add your 2nd-year timetable content here -->
+  </div>
+  <!-- Add similar divs for other years -->
+
+  <!-- Your existing code -->
+
+</body>
+</html>
+</body>
+</html>
+</body>
+</html>
